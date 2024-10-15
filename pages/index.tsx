@@ -4,18 +4,18 @@ import { Container } from 'reactstrap';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { Education } from '../component/education';
-import { Etc } from '../component/etc';
-import { Experience } from '../component/experience';
+// import { Etc } from '../component/etc';
+// import { Experience } from '../component/experience';
 import { Footer } from '../component/footer';
 import { Introduce } from '../component/introduce';
-import { OpenSource } from '../component/openSource';
-import { Presentation } from '../component/presentation';
+// import { OpenSource } from '../component/openSource';
+// import { Presentation } from '../component/presentation';
 import { Profile } from '../component/profile';
 import { Project } from '../component/project';
-import { Skill } from '../component/skill';
+// import { Skill } from '../component/skill';
 import { Style } from '../component/common/Style';
 import Payload from '../payload';
-import { Article } from '../component/article';
+// import { Article } from '../component/article';
 
 function Yosume() {
   return (

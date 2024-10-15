@@ -22,9 +22,9 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
     payload.latestUpdated,
     Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
   );
-  const latestUpdatedByNow = Math.floor(
-    DateTime.local().diff(latestUpdated).milliseconds / 1000 / 60 / 60 / 24,
-  );
+  // const latestUpdatedByNow = Math.floor(
+  //   DateTime.local().diff(latestUpdated).milliseconds / 1000 / 60 / 60 / 24,
+  // );
 
   return (
     <div className="mt-5">
@@ -33,7 +33,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
           <h2 style={Style.blue}>INTRODUCE</h2>
         </Col>
         <Col sm={12} md={9}>
-          {payload.contents.map((content, index) => (
+          {payload.contents.map((_, index) => (
             <p key={index.toString()}>
               사용자 경험(UX)을 최우선으로 고려하며 성능 최적화를 깊이 고민하고 개발에 임하고
               있습니다. 특히, 기존 1.8초가 소요되던 이미지 업로드 기능을 Next.js의 이미지 최적화
