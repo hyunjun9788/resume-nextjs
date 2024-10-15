@@ -7,11 +7,14 @@ export declare namespace IRow {
   export interface Left {
     title: string;
     subTitle?: JSX.Element;
+    url?: string[];
   }
 
   export interface Right {
     title?: string;
+    detail?: string;
     subTitle?: string;
+    skill?: string;
     descriptions?: Description[];
   }
 

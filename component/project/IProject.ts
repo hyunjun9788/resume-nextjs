@@ -17,10 +17,12 @@ export declare namespace IProject {
   export interface Item {
     /** ### 프로젝트 제목 */
     title: string;
-
+    githubUrl?: string; // GitHub URL 추가
+    deployUrl?: string; // 배포 URL 추가
     /** ### 어디서 수행했는지 (or subtitle) */
-    where: string;
+    detail: string;
 
+    skill: string;
     /**
      * ### 프로젝트 시작일
      *

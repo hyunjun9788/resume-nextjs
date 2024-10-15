@@ -1,23 +1,22 @@
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import { faEnvelope, faPen, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { IProfile } from '../component/profile/IProfile';
-import image from '../asset/sample_tux.png';
+import image from '../asset/me.jpg';
 
 const profile: IProfile.Payload = {
   disable: false,
 
   // image: 'https://resume.yowu.dev/static/image/profile_2019.png',
-  image,
+  image: '',
   name: {
-    title: 'Tux Linux Penguin',
-    small: '(Tux)',
+    title: '남현준',
+    small: '',
   },
   contact: [
     {
-      title: 'tux@linux.org',
-      link: 'mailto:tux@linux.org',
+      title: 'namhyunjun9788@gmail.com',
+      link: 'mailto:namhyunjun9788@gmail.com',
       icon: faEnvelope,
     },
     {
@@ -26,12 +25,14 @@ const profile: IProfile.Payload = {
       badge: true,
     },
     {
-      link: 'https://github.com/uyu423/resume-nextjs',
-      icon: faGithub,
+      title: 'https://velog.io/@hyunjun9788',
+      link: 'https://velog.io/@hyunjun9788',
+      icon: faPen,
     },
+
     {
-      link: 'https://www.facebook.com/groups/ubuntu.ko',
-      icon: faFacebook,
+      link: 'https://github.com/hyunjun9788',
+      icon: faGithub,
     },
   ],
   notice: {
