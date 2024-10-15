@@ -14,21 +14,25 @@ export function CommonRows({
 
   return (
     <div>
-      {index > 0 ? <hr /> : ''}
+      {index > 0 ? <hr style={{ paddingTop: '30px' }} /> : ''}
       <Row>
         <Col sm={12} md={3} className="text-md-right">
           <Row>
             <Col md={12}>
               <h4 style={Style.gray}>{left.title}</h4>
-              {left.url &&
-                left.url.map((urlItem, urlIndex) => (
-                  <span key={urlItem}>
-                    {urlIndex > 0 && ' | '}
-                    <a href={urlItem} style={Style.gray} target="_blank" rel="noreferrer">
-                      {urlIndex === 0 ? 'github' : '서비스 URL'}
-                    </a>
-                  </span>
-                ))}
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '5px' }}>
+                {left.url &&
+                  left.url.map((urlItem, urlIndex) => (
+                    <>
+                      {urlIndex > 0 && '|'}
+                      <span key={urlItem}>
+                        <a href={urlItem} style={Style.gray} target="_blank" rel="noreferrer">
+                          {urlIndex === 0 ? 'github' : '서비스 URL'}
+                        </a>
+                      </span>
+                    </>
+                  ))}
+              </div>
             </Col>
             {left.subTitle ? <Col md={12}>{left.subTitle}</Col> : ''}
           </Row>

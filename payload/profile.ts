@@ -1,6 +1,6 @@
 import { faEnvelope, faPen, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faBell } from '@fortawesome/free-regular-svg-icons';
+
 import { IProfile } from '../component/profile/IProfile';
 
 const profile: IProfile.Payload = {
@@ -35,9 +35,8 @@ const profile: IProfile.Payload = {
     },
   ],
   notice: {
-    title:
-      "The content below is all fictitious and is just a sample from 'https://github.com/uyu423/resume-nextjs'.",
-    icon: faBell,
+    title: '"저에 대한 물음표를 느낌표로 바꿀 수 있도록, 끊임없이 성장하고 노력하겠습니다."',
+    // icon: faExclamation,
   },
 };
 

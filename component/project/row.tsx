@@ -26,7 +26,20 @@ function serialize(payload: IProject.Item): IRow.Payload {
       const endedAt = DateTime.fromFormat(payload.endedAt, DATE_FORMAT.YYYY_LL).toFormat(
         DATE_FORMAT.YYYY_DOT_LL,
       );
-      return `${startedAt} ~ ${endedAt}`;
+      return (
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <span>{startedAt}</span>
+          <span style={{ margin: '0 8px' }}>~</span>
+          <span>{endedAt}</span>
+        </div>
+      );
     }
     return `${startedAt} ~`;
   })();

@@ -64,7 +64,12 @@ function createProfileContactMap(contacts: Payload['contact']) {
 function createNoticeArea(notice: Payload['notice']) {
   return (
     <EmptyRowCol>
-      <Alert color="secondary" role="alert" className="mt-3">
+      <Alert
+        color="secondary"
+        role="alert"
+        className="mt-3"
+        style={{ maxWidth: '555px', fontWeight: 'bold' }}
+      >
         {notice.icon ? <FontAwesomeIcon className="mr-2" icon={notice.icon} /> : ''}
         {notice.title}
       </Alert>
