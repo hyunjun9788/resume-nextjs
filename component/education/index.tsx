@@ -44,15 +44,30 @@ function serialize(item: Item): IRow.Payload {
     DateTime.fromFormat(at, DATE_FORMAT.YYYY_LL).toFormat(DATE_FORMAT.YYYY_DOT_LL),
   );
 
-  const endedAt =
-    item.endedAt === undefined
-      ? ' '
-      : [item.endedAt].map((at) =>
-          DateTime.fromFormat(at, DATE_FORMAT.YYYY_LL).toFormat(DATE_FORMAT.YYYY_DOT_LL),
-        );
-
+  const title = (() => {
+    if (item.endedAt) {
+      const endedAt = DateTime.fromFormat(item.endedAt, DATE_FORMAT.YYYY_LL).toFormat(
+        DATE_FORMAT.YYYY_DOT_LL,
+      );
+      return (
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <span>{startedAt}</span>
+          <span style={{ margin: '0 8px' }}>~</span>
+          <span>{endedAt}</span>
+        </div>
+      );
+    }
+    return `${startedAt} ~`;
+  })();
   return {
-    left: { title: `${startedAt} ~ ${endedAt}` },
+    left: { title },
     right: {
       ...item,
     },

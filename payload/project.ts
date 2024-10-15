@@ -9,7 +9,8 @@ const project: IProject.Payload = {
       deployUrl: 'https://www.sulsul-interview.kr/',
       startedAt: '2024-07',
       endedAt: '2024-10',
-      detail: '나의 자소서 기반으로 면접질문 예측 및 면접기출 100선 제공 서비스',
+      detail:
+        '나의 자소서 기반으로 면접질문 예측 및 면접기출 100선 제공 서비스  (PM/디자이너  1 BE 2 FE 4)',
       skill: 'TypeScript, Next.js, Tanstack Query, Zustand, React Hook Form, Tailwind',
       descriptions: [
         {
@@ -49,7 +50,7 @@ const project: IProject.Payload = {
             },
             {
               content:
-                '오늘 날짜를 기준으로 최근 4주차 selectBox를 구현하여 주차에 해당하는 데이터 패칭 구현 ',
+                '현재 날짜를 기준으로 최근 4주차 selectBox를 구현하여 주차에 해당하는 데이터 패칭 구현 ',
             },
             {
               content: '전체 답변에 대해 무한 스크롤 적용',
@@ -67,7 +68,7 @@ const project: IProject.Payload = {
       startedAt: '2024-05',
       endedAt: '2024-06',
       detail:
-        '음악, 식당, 영화, 강의, 여행지, 전자기기, 호텔, 와인, 옷, 앱 등 다양한 분야의 상품을 리뷰하는 플랫폼',
+        '음악, 식당, 영화, 강의, 여행지, 전자기기, 호텔, 와인, 옷, 앱 등 다양한 분야의 상품을 리뷰하는 플랫폼 (FE 5)',
       skill:
         'TypeScript, Next.js, Zustand, Tailwind CSS, Tanstack Query, React-Hook-Form, storybook',
       descriptions: [
