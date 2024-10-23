@@ -26,6 +26,9 @@ const project: IProject.Payload = {
               href:
                 'https://velog.io/@hyunjun9788/varcel-%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%8A%90%EB%A0%A4%EC%A7%84-%EC%9D%B4%EC%8A%88',
             },
+            {
+              content: '다양한 디바이스에서 최적의 반응형 화면을 제공하여 사용성 향상',
+            },
           ],
           weight: 'MEDIUM',
         },
@@ -114,6 +117,16 @@ const project: IProject.Payload = {
               content: 'prefetchQuery를 활용한 팔로워, 팔로잉 유저 목록 로딩 속도 약 52% 개선',
             },
             { content: '무한스크롤 및 스켈레톤 UI 적용' },
+          ],
+        },
+        {
+          content: 'REST API 엔드포인트 설계',
+          weight: 'MEDIUM',
+          descriptions: [
+            {
+              content:
+                'REST API 엔드포인트 설계를 통해 효율적인 데이터 흐름을 구축하고, 클라이언트-서버 간 통신 안정성을 높임',
+            },
           ],
         },
       ],

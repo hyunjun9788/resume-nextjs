@@ -5,7 +5,7 @@ import { Style } from './Style';
 
 export function CommonSection({ title, children }: PropsWithChildren<{ title: string }>) {
   return (
-    <div className="mt-5">
+    <div className="mt-5 mb-5">
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>

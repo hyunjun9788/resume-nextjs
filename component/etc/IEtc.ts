@@ -18,7 +18,7 @@ export declare namespace IEtc {
     title: string;
 
     /** ### 기타 항목 서브 타이틀 */
-    subTitle: string;
+    subTitle: string[];
 
     /**
      *  ### 기타 항목 시작 시점

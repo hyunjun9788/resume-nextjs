@@ -18,7 +18,7 @@ export declare namespace IEducation {
     title: string;
 
     /** ### 수료 교육 서브 타이틀 */
-    subTitle: string;
+    subTitle: string[];
 
     /**
      * ### 교육 수료 시작 시점

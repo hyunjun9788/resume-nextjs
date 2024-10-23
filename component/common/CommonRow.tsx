@@ -40,7 +40,8 @@ export function CommonRows({
         <Col sm={12} md={9}>
           {right.title ? <h4>{right.title}</h4> : ''}
           {right.detail ? <p style={{ ...Style.gray, margin: 0 }}>{right.detail}</p> : ''}
-          {right.subTitle ? <p style={{ ...Style.gray, margin: 0 }}>{right.subTitle}</p> : ''}
+          {right.subTitle &&
+            right.subTitle.map((v) => <p style={{ ...Style.gray, margin: 0 }}>{v}</p>)}
           {right.skill ? (
             <i style={{ ...Style.gray, ...Style.block, fontSize: '15px' }}>{right.skill}</i>
           ) : (

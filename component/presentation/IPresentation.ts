@@ -19,7 +19,7 @@ export declare namespace IPresentation {
     title: string;
 
     /** ### 발표 서브 타이틀 */
-    subTitle: string;
+    subTitle: string[];
 
     /**
      * ### 발표 시점
