@@ -7,14 +7,20 @@ import { CommonDescription } from './CommonDescription';
 export function CommonRows({
   index,
   payload,
-}: PropsWithChildren<{ payload: IRow.Payload; index: number }>) {
+  type,
+}: PropsWithChildren<{ payload: IRow.Payload; index: number; type?: string }>) {
   const { left, right } = payload;
 
   const isNeedDescriptionPadding = !!(right.title || right.detail || right.skill);
 
   return (
     <div>
-      {index > 0 ? <hr style={{ marginTop: '0px', marginBottom: '30px' }} /> : ''}
+      {type === 'project' && index > 0 && <hr style={{ marginTop: '0px', marginBottom: '30px' }} />}
+      {type === 'education' && index > 0 ? (
+        <hr style={{ marginTop: '30px', marginBottom: '30px' }} />
+      ) : (
+        ''
+      )}
       <Row>
         <Col sm={12} md={3} className="text-md-right">
           <Row>
