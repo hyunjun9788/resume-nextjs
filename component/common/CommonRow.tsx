@@ -14,7 +14,7 @@ export function CommonRows({
 
   return (
     <div>
-      {index > 0 ? <hr style={{ marginBottom: '30px' }} /> : ''}
+      {index > 0 ? <hr style={{ marginTop: '0px', marginBottom: '30px' }} /> : ''}
       <Row>
         <Col sm={12} md={3} className="text-md-right">
           <Row>
