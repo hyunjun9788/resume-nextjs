@@ -19,11 +19,7 @@ const profile: IProfile.Payload = {
       link: 'mailto:namhyunjun9788@gmail.com',
       icon: faEnvelope,
     },
-    {
-      title: 'Please contact me by email',
-      icon: faPhone,
-      badge: true,
-    },
+
     {
       title: 'https://velog.io/@hyunjun9788',
       link: 'https://velog.io/@hyunjun9788',

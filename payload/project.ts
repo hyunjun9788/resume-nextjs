@@ -22,12 +22,9 @@ const project: IProject.Payload = {
                 'https://velog.io/@hyunjun9788/%ED%83%80%EC%9D%B4%EB%A8%B8-useInterval-%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0',
             },
             {
-              content: 'CDN region 오 설정 이슈를 해결하여 서버 응답 속도 약 93% 개선',
+              content: 'CDN region 설정을 최적화하여 서버 응답 속도 약 93% 개선',
               href:
                 'https://velog.io/@hyunjun9788/varcel-%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%8A%90%EB%A0%A4%EC%A7%84-%EC%9D%B4%EC%8A%88',
-            },
-            {
-              content: '다양한 디바이스에서 최적의 반응형 화면을 제공하여 사용성 향상',
             },
           ],
           weight: 'MEDIUM',
@@ -39,7 +36,7 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                '답변 자동 임시 저장 및 불러오기 기능을 세션 동안만 유효하도록 하기 위해 SessionStorage를 사용하여 개발 ',
+                '답변 자동 임시 저장 및 불러오기 기능을 세션 동안만 유효하도록 하기 위해 SessionStorage를 사용하여 개발',
             },
           ],
         },
@@ -49,11 +46,11 @@ const project: IProject.Payload = {
 
           descriptions: [
             {
-              content: '추천 버튼 클릭 시 optimistic Update 적용',
+              content: '추천 버튼 클릭 시 Optimistic Update 적용',
             },
             {
               content:
-                '현재 날짜를 기준으로 최근 4주차 selectBox를 구현하여 주차에 해당하는 데이터 패칭 구현 ',
+                '현재 날짜를 기준으로 최근 4주차 selectBox를 구현하여 주차에 해당하는 데이터 패칭 구현',
             },
             {
               content: '전체 답변에 대해 무한 스크롤 적용',
@@ -70,8 +67,7 @@ const project: IProject.Payload = {
       deployUrl: 'https://wdyta.vercel.app/',
       startedAt: '2024-05',
       endedAt: '2024-06',
-      detail:
-        '음악, 식당, 영화, 강의, 여행지, 전자기기, 호텔, 와인, 옷, 앱 등 다양한 분야의 상품을 리뷰하는 플랫폼 (FE 5)',
+      detail: '음악, 식당, 영화, 전자기기 등 다양한 분야의 상품을 리뷰하는 플랫폼 (FE 5)',
       skill:
         'TypeScript, Next.js, Zustand, Tailwind CSS, Tanstack Query, React-Hook-Form, storybook',
       descriptions: [
@@ -81,7 +77,7 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                '팀원들이 효율적으로 사용할 수 있도록 TypeScript와 SVGR 라이브러리를 활용하여 SVG 컴포넌트에 타입 기반 속성을 적용.',
+                '팀원들이 효율적으로 사용할 수 있도록 TypeScript와 SVGR 라이브러리를 도입하여 SVG 컴포넌트에 타입 기반 속성을 적용',
               href: 'https://velog.io/@hyunjun9788/WDYTA-Icon-Image',
             },
           ],
@@ -91,7 +87,6 @@ const project: IProject.Payload = {
           weight: 'MEDIUM',
           descriptions: [
             { content: '상품 카드 로딩 속도 566ms에서 307ms까지 단축하여 약 45% 성능 개선' },
-            { content: '다양한 디바이스에서 최적의 반응형 화면을 제공하여 사용성 향상' },
             {
               content: '사용자에게 즉시 반응을 보이기 위해 팔로우 버튼에 Optimistic Update 적용',
             },
@@ -114,21 +109,21 @@ const project: IProject.Payload = {
           weight: 'MEDIUM',
           descriptions: [
             {
-              content: 'prefetchQuery를 활용한 팔로워, 팔로잉 유저 목록 로딩 속도 약 52% 개선',
+              content: 'prefetchQuery를 도입하여 팔로워, 팔로잉 유저 목록 로딩 속도 약 52% 개선',
             },
             { content: '무한스크롤 및 스켈레톤 UI 적용' },
           ],
         },
-        {
-          content: 'REST API 엔드포인트 설계',
-          weight: 'MEDIUM',
-          descriptions: [
-            {
-              content:
-                'REST API 엔드포인트 설계를 통해 효율적인 데이터 흐름을 구축하고, 클라이언트-서버 간 통신 안정성을 높임',
-            },
-          ],
-        },
+        // {
+        //   content: 'REST API 엔드포인트 설계',
+        //   weight: 'MEDIUM',
+        //   descriptions: [
+        //     {
+        //       content:
+        //         'REST API 엔드포인트 설계를 통해 효율적인 데이터 흐름을 구축하고, 클라이언트-서버 간 통신 안정성을 높임',
+        //     },
+        //   ],
+        // },
       ],
     },
   ],
