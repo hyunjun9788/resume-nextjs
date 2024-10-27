@@ -1,4 +1,4 @@
-import { faEnvelope, faPen, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPen } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { IProfile } from '../component/profile/IProfile';
