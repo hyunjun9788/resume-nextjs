@@ -1,7 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Row, Col } from 'reactstrap';
 import { EmptyRowCol } from '.';
-import { Style } from './Style';
 
 export function CommonSection({ title, children }: PropsWithChildren<{ title: string }>) {
   return (
@@ -9,7 +8,7 @@ export function CommonSection({ title, children }: PropsWithChildren<{ title: st
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>
-            <h2 style={Style.blue}>
+            <h2 style={{ color: '#3c78d8', marginTop: '30px' }}>
               <span>{title}</span>
             </h2>
           </Col>
