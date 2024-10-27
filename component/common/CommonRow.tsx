@@ -19,7 +19,9 @@ export function CommonRows({
 
   return (
     <div>
-      {type === 'project' && index > 0 && <hr style={{ marginTop: '0px', marginBottom: '30px' }} />}
+      {type === 'project' && index > 0 && (
+        <hr style={{ marginTop: '30px', marginBottom: '30px' }} />
+      )}
       {type === 'education' && index > 0 ? (
         <hr style={{ marginTop: '30px', marginBottom: '30px' }} />
       ) : (
