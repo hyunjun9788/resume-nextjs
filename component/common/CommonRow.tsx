@@ -1,8 +1,12 @@
 import { PropsWithChildren } from 'react';
 import { Row, Col } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { IRow } from './IRow';
 import { Style } from './Style';
 import { CommonDescription } from './CommonDescription';
+import wdyta from '../../asset/wdyta.jpg';
+import sulsul from '../../asset/sulsul.jpg';
 
 export function CommonRows({
   index,
@@ -26,17 +30,59 @@ export function CommonRows({
           <Row>
             <Col md={12}>
               <h4 style={Style.gray}>{left.title}</h4>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '5px' }}>
+              <div
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  gap: '20px',
+                  marginTop: '20px',
+                }}
+              >
                 {left.url &&
                   left.url.map((urlItem, urlIndex) => (
-                    <>
-                      {urlIndex > 0 && '|'}
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        gap: '10px',
+                      }}
+                    >
+                      {/* {urlIndex > 0 && '|'} */}
+                      {urlIndex === 0 && <span style={{ fontWeight: 'normal' }}>Github</span>}
+                      {urlIndex === 1 && <span style={{ fontWeight: 'normal' }}>서비스 URL</span>}
+
                       <span key={urlItem}>
                         <a href={urlItem} style={Style.gray} target="_blank" rel="noreferrer">
-                          {urlIndex === 0 ? 'github' : '서비스 URL'}
+                          {index === 0 && urlIndex === 0 && (
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                              <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px' }} />
+                            </div>
+                          )}
+                          {index === 0 && urlIndex === 1 && (
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                              <img
+                                src={sulsul}
+                                width="90px"
+                                height="24px"
+                                alt="sulsul 서비스 url"
+                              />
+                            </div>
+                          )}
+                          {index === 1 && urlIndex === 0 && (
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                              <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px' }} />
+                            </div>
+                          )}
+                          {index === 1 && urlIndex === 1 && (
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                              <img src={wdyta} width="90px" height="24px" alt="wdyta 서비스 url" />
+                            </div>
+                          )}
                         </a>
                       </span>
-                    </>
+                    </div>
                   ))}
               </div>
             </Col>
