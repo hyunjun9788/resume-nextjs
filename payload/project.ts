@@ -22,9 +22,13 @@ const project: IProject.Payload = {
                 'https://velog.io/@hyunjun9788/%ED%83%80%EC%9D%B4%EB%A8%B8-useInterval-%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0',
             },
             {
-              content: 'CDN region 설정을 최적화하여 서버 응답 속도 약 93% 개선',
+              content:
+                'CDN region 설정을 최적화하여 서버 응답 속도 약 21% 개선  (lighthouse 기준 56점 -> 86점)',
               href:
                 'https://velog.io/@hyunjun9788/varcel-%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%8A%90%EB%A0%A4%EC%A7%84-%EC%9D%B4%EC%8A%88',
+            },
+            {
+              content: '반응형 디자인 구현을 통한 다양한 기기의 접근성 확보',
             },
           ],
           weight: 'MEDIUM',
@@ -86,7 +90,10 @@ const project: IProject.Payload = {
           content: '프로필 페이지 개발',
           weight: 'MEDIUM',
           descriptions: [
-            { content: '상품 카드 로딩 속도 566ms에서 307ms까지 단축하여 약 45% 성능 개선' },
+            {
+              content:
+                'prefetchQuery 도입하여 상품 카드 로딩 속도 566ms에서 307ms까지 단축하여 약 45% 성능 개선',
+            },
             {
               content: '사용자에게 즉시 반응을 보이기 위해 팔로우 버튼에 Optimistic Update 적용',
             },

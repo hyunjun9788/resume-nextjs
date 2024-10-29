@@ -46,9 +46,9 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               성능 향상을 이루었습니다.
               <br />
               <br /> 실제 사용자 피드백을 바탕으로 성능을 개선하고, 서비스 운영 중 발생한 문제를
-              신속하게 개선한 경험이 있습니다. CDN 지역 설정을 최적화하여 서비스 전반의 서버 응답
+              신속하게 개선한 경험이 있습니다. CDN region 설정을 최적화하여 서비스 전반의 서버 응답
               속도를
-              <span style={{ fontWeight: 'bold' }}> 약 93% </span>개선함으로써, 사용자들에게 더
+              <span style={{ fontWeight: 'bold' }}> 약 21% </span>개선함으로써, 사용자들에게 더
               빠르고 최적화된 서비스를 제공하였습니다.
               <br />
               {/* <br />
@@ -57,9 +57,8 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               있었습니다.
               <br /> */}
               <br />
-              프론트엔드 개발자로서의 성장을 지속적으로 추구하고 있으며, 다양한 세미나와 학습을 통해
-              기술적 역량을 강화하고 있습니다. 현재는 웹 개발자로서 정점을 찍겠다는 목표를 가지고
-              노력하고 있습니다.
+              또한, 개발을 진행하면서 마주친 이슈나 학습한 내용을 꾸준히 블로그에 기록하며 성장하는
+              습관을 만들어가고 있습니다.
             </p>
           ))}
           <p className="text-right">
