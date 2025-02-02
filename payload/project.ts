@@ -105,7 +105,7 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                '이미지 최적화를 통해 파일 크기를 줄임으로써 로딩 시간 651ms에서 308ms까지 단축 (약 53%의 성능 개선)',
+                '이미지 최적화를 통해 파일 크기를 줄임으로써 로딩 시간 1.8s에서 1.1s까지 단축 (약 38%의 성능 개선)',
               href:
                 'https://velog.io/@hyunjun9788/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94-prefetch',
             },

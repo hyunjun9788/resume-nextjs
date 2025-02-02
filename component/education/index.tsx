@@ -71,7 +71,19 @@ function serialize(item: Item): IRow.Payload {
         </div>
       );
     }
-    return `${startedAt} ~`;
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <span>{startedAt}</span>
+        <span style={{ margin: '0 8px' }}>~</span>
+      </div>
+    );
   })();
   return {
     left: { title },
