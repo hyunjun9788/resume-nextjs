@@ -7,6 +7,7 @@ import { Style } from './Style';
 import { CommonDescription } from './CommonDescription';
 import wdyta from '../../asset/wdyta.jpg';
 import sulsul from '../../asset/sulsul.jpg';
+import pikiTalki from '../../asset/piki_talki.jpg';
 
 export function CommonRows({
   index,
@@ -65,10 +66,10 @@ export function CommonRows({
                           {index === 0 && urlIndex === 1 && (
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                               <img
-                                src={sulsul}
+                                src={pikiTalki}
                                 width="90px"
                                 height="24px"
-                                alt="sulsul 서비스 url"
+                                alt="피키토키 서비스 url"
                               />
                             </div>
                           )}
@@ -78,6 +79,21 @@ export function CommonRows({
                             </div>
                           )}
                           {index === 1 && urlIndex === 1 && (
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                              <img
+                                src={sulsul}
+                                width="90px"
+                                height="24px"
+                                alt="sulsul 서비스 url"
+                              />
+                            </div>
+                          )}
+                          {index === 2 && urlIndex === 0 && (
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                              <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px' }} />
+                            </div>
+                          )}
+                          {index === 2 && urlIndex === 1 && (
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                               <img src={wdyta} width="90px" height="24px" alt="wdyta 서비스 url" />
                             </div>

@@ -4,6 +4,73 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
+      title: '피키토키(Picki Talki)',
+      githubUrl: 'https://github.com/dnd-side-project/dnd-12th-4-frontend',
+      deployUrl: 'https://picki-talki.site/',
+      startedAt: '2024-12',
+      endedAt: '2025-02',
+      detail: '한때 가까웠지만 서먹해지는 그룹의 관계 유지를 돕는 서비스 (디자이너 2 BE 2 FE 2)',
+      skill: 'TypeScript, Next.js, Tanstack Query, Zustand, React Hook Form, Tailwind',
+      descriptions: [
+        {
+          content: 'NextAuth를 활용한 로그인 및 회원가입 기능 구현',
+          href: 'https://hjdevlog0.tistory.com/11',
+          descriptions: [
+            {
+              content:
+                'getServerSession을 사용하여 서버 사이드에서 사용자 인증을 검증하고, 기존 사용자 여부에 따른 리다이렉트 처리',
+              href: '',
+            },
+            {
+              content: '토큰 만료 시 refreshToken을 활용해 자동 로그인 유지 기능 구현',
+              href: '',
+            },
+            {
+              content:
+                '토큰 여부에 따라 middleware를 활용하여 인증이 필요한 페이지에 대한 접근 제어 구현',
+            },
+          ],
+          weight: 'MEDIUM',
+        },
+        {
+          content: '퍼널(Funnel) 패턴을 활용한 회원가입 과정 플로우 구축',
+          href: 'https://hjdevlog0.tistory.com/12',
+          descriptions: [
+            {
+              content:
+                '퍼널(Funnel) 패턴을 적용하여 회원 등록 과정(닉네임 설정, 채널 생성, 초대 코드 입력)을 단계별 진행 가능하도록 설계',
+              href: '',
+            },
+            {
+              content:
+                'useState를 활용하여 가입 진행 상태(stepLevel)를 관리하고, 단계별 동적 UI를 구성',
+              href: '',
+            },
+            {
+              content:
+                'react-hook-form와 zodResolver를 활용한 단계별 입력값 유지 및 API 요청 최적화',
+            },
+          ],
+          weight: 'MEDIUM',
+        },
+        {
+          content: '질문 및 답변 확인 페이지 개발',
+          weight: 'MEDIUM',
+
+          descriptions: [
+            {
+              content:
+                '탭 메뉴(전체, 친구 시그널, 내 시그널)의 선택 상태를 query string을 활용하여 동적으로 관리하고, 선택된 필터에 따라 API 요청',
+            },
+            {
+              content:
+                '답변 수정 페이지에서 Zustand를 활용해 답변 데이터를 불러와 초기값으로 설정하여 사용자 경험(UX) 개선',
+            },
+          ],
+        },
+      ],
+    },
+    {
       title: '올인원 면접 서비스 SULSUL',
       githubUrl: 'https://github.com/sulsulsulsul/sulsul',
       deployUrl: 'https://www.sulsul-interview.kr/',

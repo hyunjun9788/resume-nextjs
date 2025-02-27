@@ -118,6 +118,7 @@ function getFontWeight(weight?: IRow.Description['weight']): CSSProperties {
   }
   return {
     fontWeight: fontWeight[weight || 'DEFAULT'],
+    marginTop: '10px',
   };
 }
 
