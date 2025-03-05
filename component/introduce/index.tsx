@@ -27,7 +27,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   // );
 
   return (
-    <div className="mt-5" style={{ marginBottom: '400px' }}>
+    <div className="mt-5" style={{ marginBottom: '470px' }}>
       <Row>
         <Col sm={12} md={3}>
           <h2 style={Style.blue}>INTRODUCE</h2>
