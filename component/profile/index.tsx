@@ -20,7 +20,7 @@ export const Profile = {
 };
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
-  const { image, contact, name, notice } = payload;
+  const { image, contact, name } = payload;
   return (
     <div className="mt-5">
       <Row>
@@ -30,7 +30,6 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         <Col md={9} sm={12}>
           {createNameArea(name)}
           {createProfileContactMap(contact)}
-          {createNoticeArea(notice)}
         </Col>
       </Row>
     </div>
@@ -61,18 +60,18 @@ function createProfileContactMap(contacts: Payload['contact']) {
   );
 }
 
-function createNoticeArea(notice: Payload['notice']) {
-  return (
-    <EmptyRowCol>
-      <Alert
-        color="secondary"
-        role="alert"
-        className="mt-3"
-        style={{ maxWidth: '555px', fontWeight: 'bold' }}
-      >
-        {notice.icon ? <FontAwesomeIcon className="mr-2" icon={notice.icon} /> : ''}
-        {notice.title}
-      </Alert>
-    </EmptyRowCol>
-  );
-}
+// function createNoticeArea(notice: Payload['notice']) {
+//   return (
+//     <EmptyRowCol>
+//       <Alert
+//         color="secondary"
+//         role="alert"
+//         className="mt-3"
+//         style={{ maxWidth: '555px', fontWeight: 'bold' }}
+//       >
+//         {notice.icon ? <FontAwesomeIcon className="mr-2" icon={notice.icon} /> : ''}
+//         {notice.title}
+//       </Alert>
+//     </EmptyRowCol>
+//   );
+// }

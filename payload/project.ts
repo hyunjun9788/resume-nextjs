@@ -18,11 +18,23 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
+                'OAuth 지원 및 효율적인 토큰 관리 기능을 제공하여 보안성을 강화할 수 있다고 판단해 NextAuth를 도입',
+              href: '',
+            },
+            {
+              content:
+                '카카오 API에서 받은 accessToken을 백엔드 API로 전달하여, 새로운 accessToken과 refreshToken을 발급받고 이를 세션에서 관리',
+              href: '',
+            },
+
+            {
+              content:
                 'getServerSession을 사용하여 서버 사이드에서 사용자 인증을 검증하고, 기존 사용자 여부에 따른 리다이렉트 처리',
               href: '',
             },
             {
-              content: '토큰 만료 시 refreshToken을 활용해 자동 로그인 유지 기능 구현',
+              content:
+                '토큰 만료 시 refreshToken을 활용해 자동 로그인 유지 기능 구현하며 편리한 사용자 경험 제공',
               href: '',
             },
             {
@@ -38,17 +50,21 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
+                '코드 흐름 파악과 전역 상태 관리의 어려움을 개선하고자 퍼널(Funnel)패턴을 도입',
+              href: '',
+            },
+            {
+              content:
                 '퍼널(Funnel) 패턴을 적용하여 회원 등록 과정(닉네임 설정, 채널 생성, 초대 코드 입력)을 단계별 진행 가능하도록 설계',
               href: '',
             },
             {
-              content:
-                'useState를 활용하여 가입 진행 상태(stepLevel)를 관리하고, 단계별 동적 UI를 구성',
+              content: '가입 진행 상태를 로컬 상태로 관리',
               href: '',
             },
             {
               content:
-                'react-hook-form와 zodResolver를 활용한 단계별 입력값 유지 및 API 요청 최적화',
+                '입력값 검증과 API 요청 최적화를 위해 react-hook-form과 zodResolver를 도입. 이전 페이지의 입력값을 유지하여 단계별 검증을 수행하고, 최종 페이지에서만 API 요청을 보내 불필요한 요청을 방지',
             },
           ],
           weight: 'MEDIUM',
@@ -60,11 +76,7 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                '탭 메뉴(전체, 친구 시그널, 내 시그널)의 선택 상태를 query string을 활용하여 동적으로 관리하고, 선택된 필터에 따라 API 요청',
-            },
-            {
-              content:
-                '답변 수정 페이지에서 Zustand를 활용해 답변 데이터를 불러와 초기값으로 설정하여 사용자 경험(UX) 개선',
+                '선택한 탭(전체, 친구 시그널, 내 시그널)에 대한 정보는 url로 상태를 관리하였고, startTransition을 활용하여 반응성을 유지함',
             },
           ],
         },
