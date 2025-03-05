@@ -1,9 +1,9 @@
-import { Row, Col, Alert } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Row, Col } from 'reactstrap';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PropsWithChildren } from 'react';
 import ProfileContact from './contact';
 import ProfileImage from './image';
-import { EmptyRowCol } from '../common';
+// import { EmptyRowCol } from '../common';
 import { IProfile } from './IProfile';
 import { Style } from '../common/Style';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
