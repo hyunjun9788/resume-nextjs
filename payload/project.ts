@@ -17,6 +17,10 @@ const project: IProject.Payload = {
           href: 'https://hjdevlog0.tistory.com/11',
           descriptions: [
             {
+              content: '사용자 편의성 제공을 위해 카카오 소셜 로그인 기능 개발',
+              href: '',
+            },
+            {
               content:
                 'OAuth 지원 및 효율적인 토큰 관리 기능을 제공하여 보안성을 강화할 수 있다고 판단해 NextAuth를 도입',
               href: '',
@@ -93,23 +97,71 @@ const project: IProject.Payload = {
       skill: 'TypeScript, Next.js, Tanstack Query, Zustand, React Hook Form, Tailwind',
       descriptions: [
         {
-          content: '기출문제 페이지 개발',
+          content: 'useIntervalValue 커스텀 훅을 활용한 타이머 리렌더링 개선',
+          href:
+            'https://velog.io/@hyunjun9788/%ED%83%80%EC%9D%B4%EB%A8%B8-useInterval-%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0',
           descriptions: [
             {
-              content: 'useInterval 커스텀 훅을 활용한 타이머 리렌더링 개선',
-              href:
-                'https://velog.io/@hyunjun9788/%ED%83%80%EC%9D%B4%EB%A8%B8-useInterval-%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0',
+              content: '타이머 기능이 상위 컴포넌트에서 관리되어 불필요한 리렌더링 발생',
+              href: '',
+            },
+            {
+              content: '타이머 로직의 재사용성 부족으로 코드 중복 및 유지보수 어려움',
+              href: '',
+            },
+            {
+              content: 'useIntervalValue 커스텀 훅 설계 및 구현으로 타이머 로직 모듈화',
+              href: '',
+            },
+            {
+              content: '컴포넌트 렌더링 최적화를 통해 불필요한 리렌더링 방지',
+              href: '',
+            },
+            {
+              content: '타이머 상태를 훅 내부에서 관리하여 의존성 분리',
+              href: '',
+            },
+
+            // {
+            //   content: '반응형 디자인 구현을 통한 다양한 기기의 접근성 확보',
+            // },
+          ],
+          weight: 'MEDIUM',
+        },
+        {
+          content:
+            'CDN region 설정을 최적화하여 서버 응답 속도 약 21% 개선  (lighthouse 기준 56점 -> 86점)',
+          href:
+            'https://velog.io/@hyunjun9788/varcel-%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%8A%90%EB%A0%A4%EC%A7%84-%EC%9D%B4%EC%8A%88',
+          descriptions: [
+            {
+              content: '사용자들로부터 서비스 속도가 느리다는 피드백을 받음',
+              href: '',
             },
             {
               content:
-                'CDN region 설정을 최적화하여 서버 응답 속도 약 21% 개선  (lighthouse 기준 56점 -> 86점)',
-              href:
-                'https://velog.io/@hyunjun9788/varcel-%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%8A%90%EB%A0%A4%EC%A7%84-%EC%9D%B4%EC%8A%88',
+                '백엔드 개발자들로부터 프론트 측 이슈라고 했으나 네트워크 요청 및 리소스 로딩 시간을 분석한 결과, 배포 환경에서의 설정이 주요 원인인 점을 파악',
+              href: '',
             },
             {
-              content: '반응형 디자인 구현을 통한 다양한 기기의 접근성 확보',
+              content:
+                'CDN region 설정을 최적화하여 사용자와 가장 가까운 서버에서 리소스를 제공하도록 구성하였고, 이를 통해 서비스 전반의 서버 응답 속도를 약 21% 개선.',
+              href: '',
             },
+            {
+              content: ' 성능 개선 이후, 사용자들에게 보다 빠르고 최적화된 서비스 환경을 제공',
+              href: '',
+            },
+
+            // {
+            //   content: '반응형 디자인 구현을 통한 다양한 기기의 접근성 확보',
+            // },
           ],
+          weight: 'MEDIUM',
+        },
+        {
+          content: '기출문제 페이지 개발',
+          descriptions: [],
           weight: 'MEDIUM',
         },
         {
@@ -129,7 +181,8 @@ const project: IProject.Payload = {
 
           descriptions: [
             {
-              content: '추천 버튼 클릭 시 Optimistic Update 적용',
+              content:
+                '추천 적용에 대해 즉각적인 반응을 보이고자 추천 버튼 클릭 시 Optimistic Update 적용',
             },
             {
               content:
@@ -156,12 +209,45 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: '아이콘, 이미지, 상품 카드 공통 컴포넌트 개발',
+          href: 'https://velog.io/@hyunjun9788/WDYTA-Icon-Image',
           weight: 'MEDIUM',
           descriptions: [
             {
               content:
-                '팀원들이 효율적으로 사용할 수 있도록 TypeScript와 SVGR 라이브러리를 도입하여 SVG 컴포넌트에 타입 기반 속성을 적용',
-              href: 'https://velog.io/@hyunjun9788/WDYTA-Icon-Image',
+                '프로젝트 내 아이콘과 이미지 리소스가 많아지면서, 이를 개별적으로 불러오고 관리하는 방식이 비효율적이라 판단',
+            },
+            {
+              content:
+                '팀원들이 공통 컴포넌트를 안전하고 효율적으로 사용할 수 있도록 TypeScript와 SVGR 라이브러리를 도입',
+            },
+            {
+              content:
+                'SVG 컴포넌트에 타입 기반 속성을 적용하며, 아이콘 및 이미지명을 props로 전달',
+            },
+            {
+              content:
+                '기본 스타일을 PR을 통해 기록하여 코드 리뷰 시 스타일 가이드를 공유하고, 추가적인 스타일 적용도 가능하도록 유연성을 확보',
+            },
+          ],
+        },
+        {
+          content:
+            '이미지 최적화를 통해 이미지 로딩 시간 1.8s에서 1.1s까지 단축 (약 38%의 성능 개선)',
+          weight: 'MEDIUM',
+          href:
+            'https://velog.io/@hyunjun9788/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94-prefetch',
+          descriptions: [
+            {
+              content:
+                '용량이 큰 이미지 파일일수록 프로필 이미지 변경 시 이미지 로딩 지연이 두드러져 사용자 경험에 부정적인 영향을 미칠거라고 판단',
+            },
+            {
+              content:
+                '모든 화면 크기에서 동일한 이미지 크기를 로드하여 불필요한 리소스 낭비 발생하여 사용자의 네트워크 환경과 화면 크기에 따라 적절한 이미지 크기를 제공할 필요가 있다고 판단',
+            },
+            {
+              content:
+                'next/image의 sizes 속성을 활용하여 뷰포트 크기에 따라 적절한 이미지 크기 로드하면서 약 38% 성능 개선',
             },
           ],
         },
@@ -178,18 +264,7 @@ const project: IProject.Payload = {
             },
           ],
         },
-        {
-          content: '프로필 편집 모달 개발 ',
-          weight: 'MEDIUM',
-          descriptions: [
-            {
-              content:
-                '이미지 최적화를 통해 파일 크기를 줄임으로써 로딩 시간 1.8s에서 1.1s까지 단축 (약 38%의 성능 개선)',
-              href:
-                'https://velog.io/@hyunjun9788/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94-prefetch',
-            },
-          ],
-        },
+
         {
           content: '팔로우 모달 개발 ',
           weight: 'MEDIUM',
