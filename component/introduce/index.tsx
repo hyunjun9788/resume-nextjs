@@ -40,13 +40,10 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                 입니다.
               </span>
               <br />
-              <br /> 사용자 경험(UX)을 최우선으로 고려하며 이미지 리소스 최적화와 같은 성능 개선을
-              진행한 경험이 있고, 이를 통해 이미지 로딩 속도를
-              <span style={{ fontWeight: 'bold' }}> 약 38.7% </span>단축시킨 경험이 있습니다.
-              <br />
-              <br /> 실제 사용자로부터 서비스 이용 속도가 느리다는 피드백을 받아, 이에 대한 원인을
-              분석하고 개선하여 서비스 전반의 서버 응답 속도를
-              <span style={{ fontWeight: 'bold' }}> 약 21%</span> 개선한 경험이 있습니다.
+              <br /> 사용자 경험(UX)을 최우선으로 고려하여 성능 개선을 진행하였으며, 이미지 리소스
+              최적화를 통해 로딩 속도를 <span style={{ fontWeight: 'bold' }}>약 38.7% </span>
+              단축하고, 사용자 피드백을 바탕으로 서버 응답 속도를 분석 및 개선하여 전체적인 서비스
+              속도를 <span style={{ fontWeight: 'bold' }}>약 21%</span> 향상시킨 경험이 있습니다.
               {/* 네트워크 요청 및 리소스 로딩 시간을 분석한
               결과, 배포 환경에서의 설정이 주요 원인이라는 점을 확인했습니다. 이에 따라 CDN region
               설정을 최적화하여 사용자와 가장 가까운 서버에서 리소스를 제공하도록 구성하였고, 이를
@@ -60,15 +57,15 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               속성 값에 추가만 하도록 구현한 경험이 있습니다. 기본 스타일을 PR을 통해 기록하여 코드
               리뷰 시 스타일 가이드를 공유하고, 추가적인 스타일 적용도 가능하도록 유연성을
               확보했습니다. 이를 통해 팀원들로부터 긍정적인 피드백을 받을 수 있었습니다. */}
-              팀원들의 생산성을 향상시키기 위한 컴포넌트 또는, 공통 모듈 개발에도 관심이 많으며,
-              좋은 인터페이스를 설계하는 데 많은 관심을 가지고 있습니다.
+              팀원들의 생산성을 향상시키기 위한 컴포넌트 또는 공통 모듈 개발에도 관심이 많으며, 좋은
+              인터페이스를 설계하는 데 많은 관심을 가지고 있습니다.
               <br />
               <br />
               또한, 개발자로서 성장하기 위해 개발을 진행하면서 마주친 이슈나 학습한 내용을 꾸준히
-              블로그에 기록하며 성장하는 습관을 만들어 가고 있습니다.
+              블로그에 기록하며 성장하는 습관을 만들어가고 있습니다.
             </p>
           ))}
-          <p className="text-right">
+          {/* <p className="text-right">
             <small>Latest Updated</small>{' '}
             <Badge color="secondary">
               {`${latestUpdated.toFormat(Util.LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD)}`}
@@ -76,7 +73,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
           </p>
           <p className="text-right" style={Style.sign}>
             {payload.sign}
-          </p>
+          </p> */}
         </Col>
       </Row>
     </div>

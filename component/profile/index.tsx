@@ -1,12 +1,14 @@
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Badge } from 'reactstrap';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PropsWithChildren } from 'react';
+import { DateTime } from 'luxon';
 import ProfileContact from './contact';
 import ProfileImage from './image';
 // import { EmptyRowCol } from '../common';
 import { IProfile } from './IProfile';
 import { Style } from '../common/Style';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
+import Util from '../common/Util';
 
 type Payload = IProfile.Payload;
 
@@ -21,6 +23,10 @@ export const Profile = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const { image, contact, name } = payload;
+  const latestUpdated = DateTime.fromFormat(
+    payload.latestUpdated,
+    Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
+  );
   return (
     <div className="mt-5">
       <Row>
@@ -30,6 +36,12 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         <Col md={9} sm={12}>
           {createNameArea(name)}
           {createProfileContactMap(contact)}
+          <p className="text-right" style={{ paddingLeft: '25px', marginTop: '120px' }}>
+            <small>Latest Updated</small>{' '}
+            <Badge color="secondary">
+              {`${latestUpdated.toFormat(Util.LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD)}`}
+            </Badge>
+          </p>
         </Col>
       </Row>
     </div>

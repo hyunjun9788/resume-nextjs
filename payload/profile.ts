@@ -31,6 +31,7 @@ const profile: IProfile.Payload = {
       icon: faGithub,
     },
   ],
+  latestUpdated: '2025-03-14',
   // notice: {
   //   title: '"저에 대한 물음표를 느낌표로 바꿀 수 있도록, 끊임없이 성장하고 노력하겠습니다."',
   //   // icon: faExclamation,

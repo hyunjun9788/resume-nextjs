@@ -21,24 +21,18 @@ const project: IProject.Payload = {
               href: '',
             },
             {
-              content:
-                'OAuth 지원 및 효율적인 토큰 관리 기능을 제공하여 보안성을 강화할 수 있다고 판단해 NextAuth를 도입',
-              href: '',
-            },
-            {
-              content:
-                '카카오 API에서 받은 accessToken을 백엔드 API로 전달하여, 새로운 accessToken과 refreshToken을 발급받고 이를 세션에서 관리',
+              content: 'OAuth 지원 및 효율적인 토큰 관리 기능을 제공하는 NextAuth를 도입',
               href: '',
             },
 
             {
               content:
-                'getServerSession을 사용하여 서버 사이드에서 사용자 인증을 검증하고, 기존 사용자 여부에 따른 리다이렉트 처리',
+                'getServerSession을 사용하여 서버 사이드에서 기존 사용자 여부 및 채널 개수를 검증하고, 상황에 따른 리다이렉트 처리',
               href: '',
             },
             {
               content:
-                '토큰 만료 시 refreshToken을 활용해 자동 로그인 유지 기능 구현하며 편리한 사용자 경험 제공',
+                '토큰 만료 시 refreshToken을 활용해 자동 로그인 유지 기능 구현하며 편리한 사용자 경험을 제공',
               href: '',
             },
             {
@@ -68,7 +62,7 @@ const project: IProject.Payload = {
             },
             {
               content:
-                '입력값 검증과 API 요청 최적화를 위해 react-hook-form과 zodResolver를 도입. 이전 페이지의 입력값을 유지하여 단계별 검증을 수행하고, 최종 페이지에서만 API 요청을 보내 불필요한 요청을 방지',
+                'react-hook-form과 zodResolver를 도입하여 각 페이지의 유효성 검증을 상위 컴포넌트에서 통합적으로 관리하도록 개선함.',
             },
           ],
           weight: 'MEDIUM',
@@ -80,7 +74,7 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                '선택한 탭(전체, 친구 시그널, 내 시그널)에 대한 정보는 url로 상태를 관리하였고, startTransition을 활용하여 반응성을 유지함',
+                '선택한 탭(전체, 친구 시그널, 내 시그널)에 대한 정보는 URL로 상태를 관리하였고, startTransition을 활용하여 반응성을 유지함',
             },
           ],
         },
@@ -102,26 +96,16 @@ const project: IProject.Payload = {
             'https://velog.io/@hyunjun9788/%ED%83%80%EC%9D%B4%EB%A8%B8-useInterval-%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0',
           descriptions: [
             {
-              content: '타이머 기능이 상위 컴포넌트에서 관리되어 불필요한 리렌더링 발생',
-              href: '',
-            },
-            {
-              content: '타이머 로직의 재사용성 부족으로 코드 중복 및 유지보수 어려움',
-              href: '',
-            },
-            {
-              content: 'useIntervalValue 커스텀 훅 설계 및 구현으로 타이머 로직 모듈화',
-              href: '',
-            },
-            {
-              content: '컴포넌트 렌더링 최적화를 통해 불필요한 리렌더링 방지',
-              href: '',
-            },
-            {
-              content: '타이머 상태를 훅 내부에서 관리하여 의존성 분리',
+              content:
+                '타이머 기능이 상위 컴포넌트에서 관리되어 불필요한 리렌더링이 발생하고, 타이머 로직의 재사용성 부족으로 코드 중복 및 유지보수 어려움 존재',
               href: '',
             },
 
+            {
+              content:
+                'useIntervalValue 커스텀 훅 설계 타이머 상태를 훅 내부에서 관리하여 의존성 분리하고, 모듈화함으로써 불필요한 리렌더링 방지함',
+              href: '',
+            },
             // {
             //   content: '반응형 디자인 구현을 통한 다양한 기기의 접근성 확보',
             // },
@@ -160,6 +144,21 @@ const project: IProject.Payload = {
           weight: 'MEDIUM',
         },
         {
+          content: '전체 답변에 대해 무한 스크롤 기능 구현',
+          weight: 'MEDIUM',
+          href:
+            'https://velog.io/@hyunjun9788/%EB%AC%B4%ED%95%9C%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%8B%A4%EC%9D%8C-%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B9%8C%EC%A7%80-%EB%AF%B8%EB%A6%AC-%EA%B0%80%EC%A0%B8%EC%98%A4%EB%8A%94-%EC%9D%B4%EC%8A%88',
+          descriptions: [
+            {
+              content:
+                '답변 개수가 많아질 경우 불필요한 데이터 fetching으로 초기 로딩 속도 저하로 이어짐',
+            },
+            {
+              content: 'useInfiniteQuery 훅을 활용하여 캐싱 기능을 활용한 무한 스크롤 구현',
+            },
+          ],
+        },
+        {
           content: '기출문제 페이지 개발',
           descriptions: [],
           weight: 'MEDIUM',
@@ -187,11 +186,6 @@ const project: IProject.Payload = {
             {
               content:
                 '현재 날짜를 기준으로 최근 4주차 selectBox를 구현하여 주차에 해당하는 데이터 패칭 구현',
-            },
-            {
-              content: '전체 답변에 대해 무한 스크롤 적용',
-              href:
-                'https://velog.io/@hyunjun9788/%EB%AC%B4%ED%95%9C%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%8B%A4%EC%9D%8C-%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B9%8C%EC%A7%80-%EB%AF%B8%EB%A6%AC-%EA%B0%80%EC%A0%B8%EC%98%A4%EB%8A%94-%EC%9D%B4%EC%8A%88',
             },
           ],
         },

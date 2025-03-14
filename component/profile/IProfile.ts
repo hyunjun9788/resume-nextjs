@@ -23,6 +23,15 @@ export declare namespace IProfile {
     };
     /** ### 연락 수단 목록 */
     contact: Contact[];
+
+    /**
+     * ### 마지막 업데이트 날짜
+     *
+     * @sample '2020-03-16',
+     * @default `package.json` 의 latestUpdatedAt 을 가져온다.
+     */
+    latestUpdated: string;
+
     /** ### 공지 */
     // notice: {
     //   /** ### 공지 내용 */
@@ -62,5 +71,6 @@ export declare namespace IProfile {
      * @description Bootstrap 4 의 Badge 로 표시하고 싶을 경우 true
      */
     badge?: true;
+    latestUpdated?: string;
   }
 }
