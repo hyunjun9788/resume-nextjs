@@ -1,8 +1,6 @@
-import { Row, Col, Badge } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { PropsWithChildren } from 'react';
-import { DateTime } from 'luxon';
 import { Style } from '../common/Style';
-import Util from '../common/Util';
 import { IIntroduce } from './IIntroduce';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
 
@@ -18,10 +16,10 @@ export const Introduce = {
 };
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
-  const latestUpdated = DateTime.fromFormat(
-    payload.latestUpdated,
-    Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
-  );
+  // const latestUpdated = DateTime.fromFormat(
+  //   payload.latestUpdated,
+  //   Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
+  // );
   // const latestUpdatedByNow = Math.floor(
   //   DateTime.local().diff(latestUpdated).milliseconds / 1000 / 60 / 60 / 24,
   // );
