@@ -124,16 +124,16 @@ const project: IProject.Payload = {
             },
             {
               content:
-                '백엔드 개발자들로부터 프론트 측 이슈라고 했으나 네트워크 요청 및 리소스 로딩 시간을 분석한 결과, 배포 환경에서의 설정이 주요 원인인 점을 파악',
+                '백엔드 개발자들로부터 프론트 측 이슈라고 했으나, 네트워크 요청 및 리소스 로딩 시간을 분석한 결과 배포 환경에서의 설정이 주요 원인인 점을 파악',
               href: '',
             },
             {
               content:
-                'CDN region 설정을 최적화하여 사용자와 가장 가까운 서버에서 리소스를 제공하도록 구성하였고, 이를 통해 서비스 전반의 서버 응답 속도를 약 21% 개선.',
+                'CDN region 설정을 최적화하여 사용자와 가장 가까운 서버에서 리소스를 제공하도록 구성하였고, 이를 통해 서비스 전반의 서버 응답 속도를 약 21% 개선',
               href: '',
             },
             {
-              content: ' 성능 개선 이후, 사용자들에게 보다 빠르고 최적화된 서비스 환경을 제공',
+              content: '성능 개선 이후, 사용자들에게 보다 빠르고 최적화된 서비스 환경을 제공',
               href: '',
             },
 
@@ -156,39 +156,42 @@ const project: IProject.Payload = {
             {
               content: 'useInfiniteQuery 훅을 활용하여 캐싱 기능을 활용한 무한 스크롤 구현',
             },
+            {
+              content: '다음 답변 로딩에 대해 스켈레톤 UI를 적용하며 사용자 경험을 개선  ',
+            },
           ],
         },
-        {
-          content: '기출문제 페이지 개발',
-          descriptions: [],
-          weight: 'MEDIUM',
-        },
-        {
-          content: '답변 등록 및 수정 폼 개발',
-          weight: 'MEDIUM',
+        // {
+        //   content: '기출문제 페이지 개발',
+        //   descriptions: [],
+        //   weight: 'MEDIUM',
+        // },
+        // {
+        //   content: '답변 등록 및 수정 폼 개발',
+        //   weight: 'MEDIUM',
 
-          descriptions: [
-            {
-              content:
-                '답변 자동 임시 저장 및 불러오기 기능을 세션 동안만 유효하도록 하기 위해 SessionStorage를 사용하여 개발',
-            },
-          ],
-        },
-        {
-          content: '답변 전체 보기 모달 개발',
-          weight: 'MEDIUM',
+        //   descriptions: [
+        //     {
+        //       content:
+        //         '답변 자동 임시 저장 및 불러오기 기능을 세션 동안만 유효하도록 하기 위해 SessionStorage를 사용하여 개발',
+        //     },
+        //   ],
+        // },
+        // {
+        //   content: '답변 전체 보기 모달 개발',
+        //   weight: 'MEDIUM',
 
-          descriptions: [
-            {
-              content:
-                '추천 적용에 대해 즉각적인 반응을 보이고자 추천 버튼 클릭 시 Optimistic Update 적용',
-            },
-            {
-              content:
-                '현재 날짜를 기준으로 최근 4주차 selectBox를 구현하여 주차에 해당하는 데이터 패칭 구현',
-            },
-          ],
-        },
+        //   descriptions: [
+        //     {
+        //       content:
+        //         '추천 적용에 대해 즉각적인 반응을 보이고자 추천 버튼 클릭 시 Optimistic Update 적용',
+        //     },
+        //     {
+        //       content:
+        //         '현재 날짜를 기준으로 최근 4주차 selectBox를 구현하여 주차에 해당하는 데이터 패칭 구현',
+        //     },
+        //   ],
+        // },
       ],
     },
     {
@@ -237,11 +240,11 @@ const project: IProject.Payload = {
             },
             {
               content:
-                '모든 화면 크기에서 동일한 이미지 크기를 로드하여 불필요한 리소스 낭비 발생하여 사용자의 네트워크 환경과 화면 크기에 따라 적절한 이미지 크기를 제공할 필요가 있다고 판단',
+                '모든 화면 크기에서 동일한 이미지 크기를 로드하여 불필요한 리소스 낭비가 발생, 네트워크 환경과 화면 크기에 맞춰 최적화된 이미지 제공이 필요하다고 결론',
             },
             {
               content:
-                'next/image의 sizes 속성을 활용하여 뷰포트 크기에 따라 적절한 이미지 크기 로드하면서 약 38% 성능 개선',
+                'Next.js의 next/image에서 sizes 속성을 활용해 뷰포트 크기에 따라 적절한 이미지 크기를 로드함으로써 약 38%의 성능 개선',
             },
           ],
         },
@@ -259,16 +262,16 @@ const project: IProject.Payload = {
           ],
         },
 
-        {
-          content: '팔로우 모달 개발 ',
-          weight: 'MEDIUM',
-          descriptions: [
-            {
-              content: 'prefetchQuery를 도입하여 팔로워, 팔로잉 유저 목록 로딩 속도 약 52% 개선',
-            },
-            { content: '무한스크롤 및 스켈레톤 UI 적용' },
-          ],
-        },
+        // {
+        //   content: '팔로우 모달 개발 ',
+        //   weight: 'MEDIUM',
+        //   descriptions: [
+        //     {
+        //       content: 'prefetchQuery를 도입하여 팔로워, 팔로잉 유저 목록 로딩 속도 약 52% 개선',
+        //     },
+        //     { content: '무한스크롤 및 스켈레톤 UI 적용' },
+        //   ],
+        // },
         // {
         //   content: 'REST API 엔드포인트 설계',
         //   weight: 'MEDIUM',
