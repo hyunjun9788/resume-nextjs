@@ -154,10 +154,10 @@ const project: IProject.Payload = {
                 '답변 개수가 많아질 경우 불필요한 데이터 fetching으로 초기 로딩 속도 저하로 이어짐',
             },
             {
-              content: 'useInfiniteQuery 훅을 활용하여 캐싱 기능을 활용한 무한 스크롤 구현',
+              content: 'useInfiniteQuery 훅의 캐싱 기능을 활용하여 무한 스크롤을 구현',
             },
             {
-              content: '다음 답변 로딩에 대해 스켈레톤 UI를 적용하며 사용자 경험을 개선  ',
+              content: '다음 답변 로딩에 대해 스켈레톤 UI를 적용하며 사용자 경험을 개선',
             },
           ],
         },
