@@ -1,14 +1,12 @@
-import { Row, Col, Badge } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PropsWithChildren } from 'react';
-import { DateTime } from 'luxon';
 import ProfileContact from './contact';
 import ProfileImage from './image';
 // import { EmptyRowCol } from '../common';
 import { IProfile } from './IProfile';
 import { Style } from '../common/Style';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
-import Util from '../common/Util';
 
 type Payload = IProfile.Payload;
 
