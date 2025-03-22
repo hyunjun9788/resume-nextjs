@@ -34,12 +34,12 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         <Col md={9} sm={12}>
           {createNameArea(name)}
           {createProfileContactMap(contact)}
-          <p className="text-right" style={{ paddingLeft: '25px', marginTop: '120px' }}>
-            {/* <small>Latest Updated</small>{' '} */}
-            {/* <Badge color="secondary">
+          {/* <p className="text-right" style={{ paddingLeft: '25px', marginTop: '120px' }}> */}
+          {/* <small>Latest Updated</small>{' '} */}
+          {/* <Badge color="secondary">
               {`${latestUpdated.toFormat(Util.LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD)}`}
             </Badge> */}
-          </p>
+          {/* </p> */}
         </Col>
       </Row>
     </div>
