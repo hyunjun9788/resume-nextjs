@@ -23,10 +23,10 @@ export const Profile = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const { image, contact, name } = payload;
-  const latestUpdated = DateTime.fromFormat(
-    payload.latestUpdated,
-    Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
-  );
+  // const latestUpdated = DateTime.fromFormat(
+  //   payload.latestUpdated,
+  //   Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
+  // );
   return (
     <div className="mt-5">
       <Row>
@@ -37,10 +37,10 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
           {createNameArea(name)}
           {createProfileContactMap(contact)}
           <p className="text-right" style={{ paddingLeft: '25px', marginTop: '120px' }}>
-            <small>Latest Updated</small>{' '}
-            <Badge color="secondary">
+            {/* <small>Latest Updated</small>{' '} */}
+            {/* <Badge color="secondary">
               {`${latestUpdated.toFormat(Util.LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD)}`}
-            </Badge>
+            </Badge> */}
           </p>
         </Col>
       </Row>

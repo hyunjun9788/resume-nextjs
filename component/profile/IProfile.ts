@@ -30,7 +30,7 @@ export declare namespace IProfile {
      * @sample '2020-03-16',
      * @default `package.json` 의 latestUpdatedAt 을 가져온다.
      */
-    latestUpdated: string;
+    // latestUpdated: string;
 
     /** ### 공지 */
     // notice: {

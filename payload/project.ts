@@ -48,7 +48,7 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                '코드 흐름 파악과 전역 상태 관리의 어려움을 개선하고자 퍼널(Funnel)패턴을 도입',
+                '코드 흐름 파악과 전역 상태 관리의 어려움을 개선하고자 퍼널(Funnel) 패턴을 도입',
               href: '',
             },
             {
@@ -56,13 +56,10 @@ const project: IProject.Payload = {
                 '퍼널(Funnel) 패턴을 적용하여 회원 등록 과정(닉네임 설정, 채널 생성, 초대 코드 입력)을 단계별 진행 가능하도록 설계',
               href: '',
             },
-            {
-              content: '가입 진행 상태를 로컬 상태로 관리',
-              href: '',
-            },
+
             {
               content:
-                'react-hook-form과 zodResolver를 도입하여 각 페이지의 유효성 검증을 상위 컴포넌트에서 통합적으로 관리하도록 개선함.',
+                'react-hook-form과 zodResolver를 도입하여 각 퍼널의 유효성 검증을 상위 컴포넌트에서 통합적으로 관리하도록 개선함.',
             },
           ],
           weight: 'MEDIUM',
