@@ -103,9 +103,6 @@ const project: IProject.Payload = {
                 'useIntervalValue 커스텀 훅 설계 타이머 상태를 훅 내부에서 관리하여 의존성 분리하고, 모듈화함으로써 불필요한 리렌더링 방지함',
               href: '',
             },
-            // {
-            //   content: '반응형 디자인 구현을 통한 다양한 기기의 접근성 확보',
-            // },
           ],
           weight: 'MEDIUM',
         },
@@ -140,6 +137,7 @@ const project: IProject.Payload = {
           ],
           weight: 'MEDIUM',
         },
+
         {
           content: '전체 답변에 대해 무한 스크롤 기능 구현',
           weight: 'MEDIUM',
@@ -157,6 +155,11 @@ const project: IProject.Payload = {
               content: '다음 답변 로딩에 대해 스켈레톤 UI를 적용하며 사용자 경험을 개선',
             },
           ],
+        },
+        {
+          content:
+            '다양한 화면 크기와 디바이스에서 일관된 경험을 제공하도록 반응형 디자인 및 스타일링 구현',
+          weight: 'MEDIUM',
         },
         // {
         //   content: '기출문제 페이지 개발',
