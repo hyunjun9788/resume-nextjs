@@ -2,7 +2,7 @@ import { faEnvelope, faPen } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { IProfile } from '../component/profile/IProfile';
-import image from '../asset/profile3.jpg';
+import image from '../asset/profile5.png';
 
 const profile: IProfile.Payload = {
   disable: false,
@@ -21,8 +21,8 @@ const profile: IProfile.Payload = {
     },
 
     {
-      title: 'https://velog.io/@hyunjun9788',
-      link: 'https://velog.io/@hyunjun9788',
+      title: 'https://hjdevlog0.tistory.com',
+      link: 'https://hjdevlog0.tistory.com',
       icon: faPen,
     },
 

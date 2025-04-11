@@ -9,8 +9,17 @@ const project: IProject.Payload = {
       deployUrl: 'https://picki-talki.site/',
       startedAt: '2024-12',
       endedAt: '2025-02',
-      detail: '한때 가까웠지만 서먹해지는 그룹의 관계 유지를 돕는 서비스 (디자이너 2 BE 2 FE 2)',
-      skill: 'TypeScript, Next.js, Tanstack Query, Zustand, React Hook Form, Tailwind',
+      detail:
+        '한때 가까웠지만 소원해진 그룹을 자연스럽게 다시 연결하고 추억을 함께 쌓는 관계 회복 서비스 ​ (디자이너 2 BE 2 FE 2)',
+      skill: [
+        'TypeScript',
+        'Next.js',
+        'NextAuth',
+        'Tanstack Query',
+        'Zustand',
+        'React Hook Form',
+        'Tailwind',
+      ],
       descriptions: [
         {
           content: 'NextAuth를 활용한 로그인 및 회원가입 기능 구현',
@@ -85,7 +94,7 @@ const project: IProject.Payload = {
       endedAt: '2024-10',
       detail:
         '나의 자소서 기반으로 면접질문 예측 및 면접기출 100선 제공 서비스  (PM/디자이너  1 BE 2 FE 4)',
-      skill: 'TypeScript, Next.js, Tanstack Query, Zustand, React Hook Form, Tailwind',
+      skill: ['TypeScript', 'Next.js', 'Tanstack Query', 'Zustand', 'React Hook Form', 'Tailwind'],
       descriptions: [
         {
           content: 'useIntervalValue 커스텀 훅을 활용한 타이머 리렌더링 개선',
@@ -201,11 +210,10 @@ const project: IProject.Payload = {
       startedAt: '2024-05',
       endedAt: '2024-06',
       detail: '음악, 식당, 영화, 전자기기 등 다양한 분야의 상품을 리뷰하는 플랫폼 (FE 5)',
-      skill:
-        'TypeScript, Next.js, Zustand, Tailwind CSS, Tanstack Query, React-Hook-Form, storybook',
+      skill: ['TypeScript', 'Next.js', 'Tanstack Query', 'Zustand', 'React Hook Form', 'Tailwind'],
       descriptions: [
         {
-          content: '아이콘, 이미지, 상품 카드 공통 컴포넌트 개발',
+          content: '아이콘, 이미지, 상품 카드 UI를 모듈화하여 팀 개발 생산성 향상',
           href: 'https://velog.io/@hyunjun9788/WDYTA-Icon-Image',
           weight: 'MEDIUM',
           descriptions: [

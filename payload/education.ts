@@ -21,7 +21,7 @@ const education: IEducation.Payload = {
       ],
 
       startedAt: '2024-12',
-      // endedAt: 'undefined',
+      endedAt: '2025-04',
     },
     {
       title: '코드잇 스프린트 프론트엔드 엔지니어 부트캠프 수료',

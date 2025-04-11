@@ -22,7 +22,7 @@ export declare namespace IProject {
     /** ### 어디서 수행했는지 (or subtitle) */
     detail: string;
 
-    skill: string;
+    skill: string[];
     /**
      * ### 프로젝트 시작일
      *

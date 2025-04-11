@@ -108,15 +108,35 @@ export function CommonRows({
           </Row>
         </Col>
         <Col sm={12} md={9}>
-          {right.title ? <h4>{right.title}</h4> : ''}
-          {right.detail ? <p style={{ ...Style.gray, margin: 0 }}>{right.detail}</p> : ''}
-          {right.subTitle &&
-            right.subTitle.map((v) => <p style={{ ...Style.gray, margin: 0 }}>{v}</p>)}
-          {right.skill ? (
-            <i style={{ ...Style.gray, ...Style.block, fontSize: '15px' }}>{right.skill}</i>
+          {right.title ? (
+            <h4 style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>{right.title}</h4>
           ) : (
             ''
           )}
+          {right.detail ? <p style={{ ...Style.gray, margin: 0 }}>{right.detail}</p> : ''}
+          {right.subTitle &&
+            right.subTitle.map((v) => <p style={{ ...Style.gray, margin: 0 }}>{v}</p>)}
+          <div style={{ display: 'flex', gap: '8px', marginTop: '4px' }}>
+            {right.skill
+              ? right.skill.map((v) => (
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      backgroundColor: '#f0f0f0', // 연한 회색 배경
+                      color: '#3c78d8', // 글자색
+                      padding: '1px 4px', // 내부 여백
+                      borderRadius: '4px', // 모서리 둥글게
+                      fontSize: '12px',
+                      fontWeight: 500,
+                    }}
+                  >
+                    {v}
+                  </div>
+                ))
+              : ''}
+          </div>
           {right.descriptions ? (
             <CommonDescription
               descriptions={right.descriptions}

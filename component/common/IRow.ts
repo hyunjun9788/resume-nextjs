@@ -14,7 +14,8 @@ export declare namespace IRow {
     title?: string;
     detail?: string;
     subTitle?: string[];
-    skill?: string;
+    skill?: string[];
+    blog?: boolean;
     descriptions?: Description[];
   }
 
@@ -30,6 +31,7 @@ export declare namespace IRow {
   export interface Description {
     /** ### 설명 본문 */
     content: string;
+    blog?: boolean;
 
     /**
      * ### 폰트 두께 설정이 필요할 경우
