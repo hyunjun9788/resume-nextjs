@@ -131,7 +131,7 @@ const project: IProject.Payload = {
           weight: 'SEMI_BOLD',
         },
         {
-          content: 'CDN region 최적화 -> 서버 응답 속도 약 21% 개선  (lighthouse 56점 -> 86점)',
+          content: 'CDN region 최적화 -> 서버 응답 속도 21% 개선  (lighthouse 56점 -> 86점)',
           postHref:
             'https://velog.io/@hyunjun9788/varcel-%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%8A%90%EB%A0%A4%EC%A7%84-%EC%9D%B4%EC%8A%88',
           descriptions: [

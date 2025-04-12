@@ -66,8 +66,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                 <li>
                   서비스 운영 중 발생한 문제를 빠르게 찾아내고 해결하기 위해 주도적으로 노력한 결과,{' '}
                   <span style={{ fontWeight: 600 }}>
-                    서버 응답 속도를 분석·개선해 <br />
-                    전체 서비스 속도를 약 21% 향상
+                    서버 응답 속도를 분석·개선해 전체 서비스 속도를 약 21% 향상
                   </span>
                   시킨 경험이 있습니다.
                 </li>
