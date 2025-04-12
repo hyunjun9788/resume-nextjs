@@ -81,15 +81,29 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     if (postHref && postImage) {
       return (
         <li style={getFontWeight(weight)}>
-          {content} <HrefTargetBlank url={postHref} text={postHref} />{' '}
-          <img src={postImage} alt={postImage} />
+          {content} <HrefTargetBlank url={postHref} text={postHref} />
         </li>
       );
     }
     if (postHref) {
       return (
         <li style={getFontWeight(weight)}>
-          {content} <HrefTargetBlank url={postHref} text={postHref} />
+          {content}
+          <a
+            href={postHref}
+            target="_blank"
+            style={{
+              fontWeight: 500,
+              marginLeft: '8px',
+              fontSize: '12px',
+              textDecoration: 'underline',
+              textUnderlineOffset: '3px',
+              color: 'rgb(137, 142, 150)',
+            }}
+            rel="noreferrer"
+          >
+            블로그 포스팅↗
+          </a>
         </li>
       );
     }

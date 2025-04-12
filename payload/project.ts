@@ -23,26 +23,26 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: 'NextAuth 토큰 갱신 로직 개선하여 끊김 없는 사용자 경험 제공',
-          href: 'https://hjdevlog0.tistory.com/11',
+          postHref: 'https://hjdevlog0.tistory.com/11',
           descriptions: [
             // {
             //   content: 'NextAuth를 활용하여 카카오 소셜 로그인을 구현했으며, 서버 사이드에서 사용자 인증과 채널 정보를 검증해 상황에 따라 리다이렉트 처리',
-            //   href: '',
+            //   postHref: '',
             // },
             // {
             //   content: 'OAuth 지원 및 효율적인 토큰 관리 기능을 제공하는 NextAuth를 도입',
-            //   href: '',
+            //   postHref: '',
             // },
 
             // {
             //   content:
             //     'getServerSession을 사용하여 서버 사이드에서 기존 사용자 여부 및 채널 개수를 검증하고, 상황에 따른 리다이렉트 처리',
-            //   href: '',
+            //   postHref: '',
             // },
             // {
             //   content:
             //     '토큰 만료 시 refreshToken을 활용해 자동 로그인 유지 기능 구현하며 편리한 사용자 경험을 제공',
-            //   href: '',
+            //   postHref: '',
             // },
             // {
             //   content:
@@ -51,34 +51,34 @@ const project: IProject.Payload = {
             {
               content:
                 '카카오 소셜 로그인을 구현하며, 서버 사이드에서 사용자 인증과 채널 정보를 검증해 상황에 따라 리다이렉트 처리',
-              href: '',
+              postHref: '',
             },
             {
               content:
                 '사용자가 아무런 액션 없이 사이트에 머무를 경우, 토큰 만료 시점에도 jwt 콜백이 실행되지 않아 만료된 세션이 유지되는 문제 발견',
-              href: '',
+              postHref: '',
             },
             {
               content:
                 '주기적으로 토큰 만료를 체크하여 useSession 훅의 update를 호출함으로써 jwt 콜백을 실행하고 세션을 갱신하며 해결',
-              href: '',
+              postHref: '',
             },
           ],
           weight: 'SEMI_BOLD',
         },
         {
           content: '퍼널(Funnel) 패턴을 활용한 회원가입 과정 플로우 구축',
-          href: 'https://hjdevlog0.tistory.com/12',
+          postHref: 'https://hjdevlog0.tistory.com/12',
           descriptions: [
             {
               content:
                 '코드 흐름 파악과 전역 상태 관리의 어려움을 개선하고자 퍼널(Funnel) 패턴을 도입',
-              href: '',
+              postHref: '',
             },
             {
               content:
                 '퍼널(Funnel) 패턴을 적용하여 회원 등록 과정(닉네임 설정, 채널 생성, 초대 코드 입력)을 단계별 진행 가능하도록 설계',
-              href: '',
+              postHref: '',
             },
 
             {
@@ -113,46 +113,45 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: 'useIntervalValue 커스텀 훅을 활용한 타이머 리렌더링 개선',
-          href:
+          postHref:
             'https://velog.io/@hyunjun9788/%ED%83%80%EC%9D%B4%EB%A8%B8-useInterval-%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0',
           descriptions: [
             {
               content:
                 '타이머 기능이 상위 컴포넌트에서 관리되어 불필요한 리렌더링이 발생하고, 타이머 로직의 재사용성 부족으로 코드 중복 및 유지보수 어려움 존재',
-              href: '',
+              postHref: '',
             },
 
             {
               content:
                 'useIntervalValue 커스텀 훅 설계 타이머 상태를 훅 내부에서 관리하여 의존성 분리하고, 모듈화함으로써 불필요한 리렌더링 방지함',
-              href: '',
+              postHref: '',
             },
           ],
           weight: 'SEMI_BOLD',
         },
         {
-          content:
-            'CDN region 설정을 최적화하여 서버 응답 속도 약 21% 개선  (lighthouse 기준 56점 -> 86점)',
-          href:
+          content: 'CDN region 최적화 -> 서버 응답 속도 약 21% 개선  (lighthouse 56점 -> 86점)',
+          postHref:
             'https://velog.io/@hyunjun9788/varcel-%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%8A%90%EB%A0%A4%EC%A7%84-%EC%9D%B4%EC%8A%88',
           descriptions: [
             {
               content: '사용자들로부터 서비스 속도가 느리다는 피드백을 받음',
-              href: '',
+              postHref: '',
             },
             {
               content:
                 '네트워크 요청 및 리소스 로딩 시간을 분석한 결과, 배포 환경에서의 설정이 주요 원인인 점을 파악',
-              href: '',
+              postHref: '',
             },
             {
               content:
                 'CDN region 설정을 최적화하여 사용자와 가장 가까운 서버에서 리소스를 제공하도록 구성하였고, 이를 통해 서비스 전반의 서버 응답 속도를 약 21% 개선',
-              href: '',
+              postHref: '',
             },
             {
               content: '성능 개선 이후, 사용자들에게 보다 빠르고 최적화된 서비스 환경을 제공',
-              href: '',
+              postHref: '',
             },
 
             // {
@@ -165,7 +164,7 @@ const project: IProject.Payload = {
         {
           content: '전체 답변에 대해 무한 스크롤 기능 구현',
           weight: 'SEMI_BOLD',
-          href:
+          postHref:
             'https://velog.io/@hyunjun9788/%EB%AC%B4%ED%95%9C%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%8B%A4%EC%9D%8C-%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B9%8C%EC%A7%80-%EB%AF%B8%EB%A6%AC-%EA%B0%80%EC%A0%B8%EC%98%A4%EB%8A%94-%EC%9D%B4%EC%8A%88',
           descriptions: [
             {
@@ -229,7 +228,7 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: '아이콘, 이미지, 상품 카드 UI를 모듈화하여 팀 개발 생산성 향상',
-          href: 'https://velog.io/@hyunjun9788/WDYTA-Icon-Image',
+          postHref: 'https://velog.io/@hyunjun9788/WDYTA-Icon-Image',
           weight: 'SEMI_BOLD',
           descriptions: [
             {
@@ -252,9 +251,9 @@ const project: IProject.Payload = {
         },
         {
           content:
-            '이미지 최적화를 통해 이미지 로딩 시간 1.8s에서 1.1s까지 단축 (약 38%의 성능 개선)',
+            '이미지 최적화를 통해 이미지 로딩 시간 1.8s에서 1.1s까지 단축 (약 38% 성능 개선)',
           weight: 'SEMI_BOLD',
-          href:
+          postHref:
             'https://velog.io/@hyunjun9788/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94-prefetch',
           descriptions: [
             {

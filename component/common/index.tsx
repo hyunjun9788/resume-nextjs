@@ -16,10 +16,7 @@ export function HrefTargetBlank({ url, text }: PropsWithChildren<{ url: string; 
       target="_blank"
       rel="noreferrer noopener"
       style={{
-        textDecoration: 'underline',
         color: '#3c78d8',
-        textDecorationThickness: '1px',
-        textUnderlineOffset: '5px',
       }}
     >
       {text || url}
