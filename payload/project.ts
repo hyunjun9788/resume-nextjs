@@ -22,34 +22,49 @@ const project: IProject.Payload = {
       ],
       descriptions: [
         {
-          content: 'NextAuth를 활용한 로그인 및 회원가입 기능 구현',
+          content: 'NextAuth 토큰 갱신 로직 개선하여 끊김 없는 사용자 경험 제공',
           href: 'https://hjdevlog0.tistory.com/11',
           descriptions: [
-            {
-              content: '사용자 편의성 제공을 위해 카카오 소셜 로그인 기능 개발',
-              href: '',
-            },
-            {
-              content: 'OAuth 지원 및 효율적인 토큰 관리 기능을 제공하는 NextAuth를 도입',
-              href: '',
-            },
+            // {
+            //   content: 'NextAuth를 활용하여 카카오 소셜 로그인을 구현했으며, 서버 사이드에서 사용자 인증과 채널 정보를 검증해 상황에 따라 리다이렉트 처리',
+            //   href: '',
+            // },
+            // {
+            //   content: 'OAuth 지원 및 효율적인 토큰 관리 기능을 제공하는 NextAuth를 도입',
+            //   href: '',
+            // },
 
+            // {
+            //   content:
+            //     'getServerSession을 사용하여 서버 사이드에서 기존 사용자 여부 및 채널 개수를 검증하고, 상황에 따른 리다이렉트 처리',
+            //   href: '',
+            // },
+            // {
+            //   content:
+            //     '토큰 만료 시 refreshToken을 활용해 자동 로그인 유지 기능 구현하며 편리한 사용자 경험을 제공',
+            //   href: '',
+            // },
+            // {
+            //   content:
+            //     '토큰 여부에 따라 middleware를 활용하여 인증이 필요한 페이지에 대한 접근 제어 구현',
+            // },
             {
               content:
-                'getServerSession을 사용하여 서버 사이드에서 기존 사용자 여부 및 채널 개수를 검증하고, 상황에 따른 리다이렉트 처리',
+                '카카오 소셜 로그인을 구현하며, 서버 사이드에서 사용자 인증과 채널 정보를 검증해 상황에 따라 리다이렉트 처리',
               href: '',
             },
             {
               content:
-                '토큰 만료 시 refreshToken을 활용해 자동 로그인 유지 기능 구현하며 편리한 사용자 경험을 제공',
+                '사용자가 아무런 액션 없이 사이트에 머무를 경우, 토큰 만료 시점에도 jwt 콜백이 실행되지 않아 만료된 세션이 유지되는 문제 발견',
               href: '',
             },
             {
               content:
-                '토큰 여부에 따라 middleware를 활용하여 인증이 필요한 페이지에 대한 접근 제어 구현',
+                '주기적으로 토큰 만료를 체크하여 useSession 훅의 update를 호출함으로써 jwt 콜백을 실행하고 세션을 갱신하며 해결',
+              href: '',
             },
           ],
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
         },
         {
           content: '퍼널(Funnel) 패턴을 활용한 회원가입 과정 플로우 구축',
@@ -71,11 +86,11 @@ const project: IProject.Payload = {
                 'react-hook-form과 zodResolver를 도입하여 각 퍼널의 유효성 검증을 상위 컴포넌트에서 통합적으로 관리하도록 개선함.',
             },
           ],
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
         },
         {
           content: '질문 및 답변 확인 페이지 개발',
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
 
           descriptions: [
             {
@@ -113,7 +128,7 @@ const project: IProject.Payload = {
               href: '',
             },
           ],
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
         },
         {
           content:
@@ -144,12 +159,12 @@ const project: IProject.Payload = {
             //   content: '반응형 디자인 구현을 통한 다양한 기기의 접근성 확보',
             // },
           ],
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
         },
 
         {
           content: '전체 답변에 대해 무한 스크롤 기능 구현',
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
           href:
             'https://velog.io/@hyunjun9788/%EB%AC%B4%ED%95%9C%EC%8A%A4%ED%81%AC%EB%A1%A4-%EB%8B%A4%EC%9D%8C-%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B9%8C%EC%A7%80-%EB%AF%B8%EB%A6%AC-%EA%B0%80%EC%A0%B8%EC%98%A4%EB%8A%94-%EC%9D%B4%EC%8A%88',
           descriptions: [
@@ -168,16 +183,16 @@ const project: IProject.Payload = {
         {
           content:
             '다양한 화면 크기와 디바이스에서 일관된 경험을 제공하도록 반응형 디자인 및 스타일링 구현',
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
         },
         // {
         //   content: '기출문제 페이지 개발',
         //   descriptions: [],
-        //   weight: 'MEDIUM',
+        //   weight: 'SEMI_BOLD',
         // },
         // {
         //   content: '답변 등록 및 수정 폼 개발',
-        //   weight: 'MEDIUM',
+        //   weight: 'SEMI_BOLD',
 
         //   descriptions: [
         //     {
@@ -188,7 +203,7 @@ const project: IProject.Payload = {
         // },
         // {
         //   content: '답변 전체 보기 모달 개발',
-        //   weight: 'MEDIUM',
+        //   weight: 'SEMI_BOLD',
 
         //   descriptions: [
         //     {
@@ -215,7 +230,7 @@ const project: IProject.Payload = {
         {
           content: '아이콘, 이미지, 상품 카드 UI를 모듈화하여 팀 개발 생산성 향상',
           href: 'https://velog.io/@hyunjun9788/WDYTA-Icon-Image',
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
           descriptions: [
             {
               content:
@@ -238,7 +253,7 @@ const project: IProject.Payload = {
         {
           content:
             '이미지 최적화를 통해 이미지 로딩 시간 1.8s에서 1.1s까지 단축 (약 38%의 성능 개선)',
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
           href:
             'https://velog.io/@hyunjun9788/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94-prefetch',
           descriptions: [
@@ -258,7 +273,7 @@ const project: IProject.Payload = {
         },
         {
           content: '프로필 페이지 개발',
-          weight: 'MEDIUM',
+          weight: 'SEMI_BOLD',
           descriptions: [
             {
               content:
@@ -272,7 +287,7 @@ const project: IProject.Payload = {
 
         // {
         //   content: '팔로우 모달 개발 ',
-        //   weight: 'MEDIUM',
+        //   weight: 'SEMI_BOLD',
         //   descriptions: [
         //     {
         //       content: 'prefetchQuery를 도입하여 팔로워, 팔로잉 유저 목록 로딩 속도 약 52% 개선',
@@ -282,7 +297,7 @@ const project: IProject.Payload = {
         // },
         // {
         //   content: 'REST API 엔드포인트 설계',
-        //   weight: 'MEDIUM',
+        //   weight: 'SEMI_BOLD',
         //   descriptions: [
         //     {
         //       content:

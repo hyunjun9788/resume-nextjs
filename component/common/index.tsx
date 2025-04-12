@@ -11,7 +11,17 @@ export function EmptyRowCol<T = {}>({ children }: PropsWithChildren<T>) {
 
 export function HrefTargetBlank({ url, text }: PropsWithChildren<{ url: string; text?: string }>) {
   return (
-    <a href={url} target="_blank" rel="noreferrer noopener" style={{ textDecoration: 'underline' }}>
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer noopener"
+      style={{
+        textDecoration: 'underline',
+        color: '#3c78d8',
+        textDecorationThickness: '1px',
+        textUnderlineOffset: '5px',
+      }}
+    >
       {text || url}
     </a>
   );

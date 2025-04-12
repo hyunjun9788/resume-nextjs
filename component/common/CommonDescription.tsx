@@ -116,10 +116,12 @@ function getFontWeight(weight?: IRow.Description['weight']): CSSProperties {
     // style 에 fontWeight 범벅 되는것을 방지
     return {};
   }
+
   return {
     fontWeight: fontWeight[weight || 'DEFAULT'],
     marginTop: '10px',
-    fontSize: '18px',
+    fontSize: '20px',
+    color: '#3c78d8',
   };
 }
 
