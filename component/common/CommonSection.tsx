@@ -8,7 +8,7 @@ export function CommonSection({ title, children }: PropsWithChildren<{ title: st
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>
-            <h2 style={{ color: '#3c78d8', marginTop: title === 'EDUCATION' ? '200px' : '30px' }}>
+            <h2 style={{ color: '#3c78d8', marginTop: title === 'EDUCATION' ? '230px' : '30px' }}>
               <span>{title}</span>
             </h2>
           </Col>
