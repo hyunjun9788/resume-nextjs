@@ -22,7 +22,7 @@ export const Education = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
-    <CommonSection title="EDUCATION">
+    <CommonSection title="EXPERIENCE">
       <EducationRow payload={payload} />
     </CommonSection>
   );
@@ -34,7 +34,7 @@ function EducationRow({ payload }: PropsWithChildren<{ payload: Payload }>) {
       {payload.list.map((item, index) => {
         return (
           <CommonRows
-            type="education"
+            type="experience"
             key={index.toString()}
             payload={serialize(item)}
             index={index}
