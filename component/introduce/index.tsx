@@ -51,9 +51,8 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               >
                 <li>
                   동료들이 제 코드를 이해하고 활용하는 데 들이는 시간을 1초라도 줄이기 위해,
-                  <span style={{ fontWeight: 600 }}> 가독성과 직관적인 코드 작성</span>
-                  에 대해 <br />
-                  꾸준히 고민하며 학습합니다.
+                  <span style={{ fontWeight: 600 }}> 가독성과 직관성</span>을 최우선으로 고려하며
+                  개발에 임합니다.
                 </li>
                 <li>
                   제가 개발한 공통 모듈을 동료들이 사용할 때,
