@@ -34,7 +34,7 @@ const education: IEducation.Payload = {
       endedAt: '2024-06',
     },
     {
-      title: '충남대학교 정보통계학과 (편입)',
+      title: '충남대학교 정보통계학과',
       subTitle: [' R 프로그래밍을 활용한 데이터 분석 및 다양한 분석 기법에 대해 학습했습니다.'],
       startedAt: '2021-03',
       endedAt: '2023-08',
