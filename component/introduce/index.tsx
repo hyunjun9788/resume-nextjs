@@ -64,12 +64,11 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                   라는 말을 들으면 큰 보람을 느낍니다.
                 </li>
                 <li>
-                  서비스 운영 중 발생한 문제를 빠르게 찾아내고 해결하기 위해 주도적으로 노력한 결과,{' '}
-                  <span style={{ fontWeight: 600 }}>
-                    서버 응답 속도를 분석·개선해
-                    <br /> 전체 서비스 속도를 약 21% 향상
-                  </span>
-                  시킨 경험이 있습니다.
+                  아이콘 공통 컴포넌트를 설계하고, 사용법과 스타일 가이드를 각각{' '}
+                  <span style={{ fontWeight: 600 }}>TSDoc</span>과{' '}
+                  <span style={{ fontWeight: 600 }}>PR</span>에 정리해{' '}
+                  <span style={{ fontWeight: 600 }}>빠른 개발에 도움이 되었다는 피드백</span>을 받은
+                  경험이 있습니다.
                 </li>
               </ul>
               {/* 네트워크 요청 및 리소스 로딩 시간을 분석한
@@ -96,15 +95,16 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                 }}
               >
                 <li>
-                  사용자 경험이 좋지 않은 것은{' '}
-                  <span style={{ fontWeight: 600 }}>불편한 의자에 앉아 있는 것</span>과 같다고
-                  생각합니다. 결국 그 의자에서 빨리 일어나는 것처럼, 사용자가 서비스에서 이탈하지
-                  않도록 동료들과 함께 고민하고 개선점을 찾아내는 과정을 즐깁니다.
+                  CDN 지역 설정을 최적화하여 서버 응답 속도를 단축하고,{' '}
+                  <span style={{ fontWeight: 600 }}>
+                    페이지 로딩 속도를 약 21% 개선한 경험이 있습니다.
+                  </span>
                 </li>
                 <li>
-                  이미지 로딩 시간을 단축하는 것이 사용자 만족도 향상에 중요하다고 판단해 최적화를
-                  제안했고, 작업한 결과 <br />
-                  <span style={{ fontWeight: 600 }}>약 38%의 성능 개선을 달성했습니다.</span>
+                  초기 이미지 로딩 지연 문제를 개선하고자 이미지 최적화 작업을 수행하여,{' '}
+                  <span style={{ fontWeight: 600 }}>
+                    LCP 지표를 2.8초에서 2.3초로 약 18% 단축했습니다.
+                  </span>
                 </li>
               </ul>
             </p>

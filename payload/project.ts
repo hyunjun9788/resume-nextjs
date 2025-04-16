@@ -266,7 +266,7 @@ const project: IProject.Payload = {
             },
             {
               content:
-                'Next.js의 next/image에서 sizes 속성을 활용해 뷰포트 크기에 따라 적절한 이미지 크기를 로드함으로써 약 38%의 성능 개선',
+                'next/image의 sizes 속성을 활용해 뷰포트 크기에 따라 최적화된 이미지 크기를 로드하고, 이미지 로딩 속도 약 38% 개선 및 LCP 지표 18% 단축',
             },
           ],
         },
