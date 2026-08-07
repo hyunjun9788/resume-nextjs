@@ -17,14 +17,60 @@ export default function ExperienceRow({
           {createWorkingPeriod(item.startedAt, item.endedAt)}
         </Col>
         <Col sm={12} md={9}>
-          <h4>{item.title}</h4>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '8px',
+            }}
+          >
+            <h4>{item.title}</h4>
+            <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+              {createBadges(item.startedAt, item.endedAt)}
+            </div>
+          </div>
           <i style={Style.gray}>{item.position}</i>
-          <ul className="pt-3">
-            {item.descriptions.map((description, descIndex) => (
-              <li key={descIndex.toString()}>{description}</li>
-            ))}
-            {createSkillKeywords(item.skillKeywords)}
-          </ul>
+          <div className="pt-3">
+            {item.projects ? (
+              <>
+                {item.projects.map((project, projectIndex) => {
+                  const isLastProject = item.projects && projectIndex < item.projects.length - 1;
+                  return (
+                    <div
+                      key={projectIndex.toString()}
+                      style={{
+                        marginBottom: isLastProject ? '20px' : '0',
+                      }}
+                    >
+                      <h6
+                        style={{
+                          // fontWeight: 600,
+                          marginBottom: '8px',
+                          fontFamily: 'Pretendard, sans-serif',
+                        }}
+                      >
+                        {project.title}
+                      </h6>
+                      <ul style={{ marginLeft: '20px', marginBottom: '0' }}>
+                        {project.tasks.map((task, taskIndex) => (
+                          <li key={taskIndex.toString()}>{task}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+                {createSkillKeywords(item.skillKeywords)}
+              </>
+            ) : (
+              <ul>
+                {item.descriptions.map((description, descIndex) => (
+                  <li key={descIndex.toString()}>{description}</li>
+                ))}
+                {createSkillKeywords(item.skillKeywords)}
+              </ul>
+            )}
+          </div>
         </Col>
       </Row>
     </div>
@@ -56,42 +102,61 @@ function createSkillKeywords(skillKeywords?: string[]) {
 
 function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
   const DATE_FORMAT = Util.LUXON_DATE_FORMAT;
-  const startedAt = DateTime.fromFormat(startedAtString, DATE_FORMAT.YYYY_LL);
+  const startedAt = DateTime.fromFormat(startedAtString, DATE_FORMAT.YYYY_LL).toFormat(
+    DATE_FORMAT.YYYY_DOT_LL,
+  );
 
-  const { periodTitle, endedAt, isWorking } = (() => {
+  const periodTitle = (() => {
     if (!endedAtString) {
-      return {
-        periodTitle: `${startedAt.toFormat(DATE_FORMAT.YYYY_DOT_LL)} ~`,
-        isWorking: true,
-        endedAt: undefined,
-      };
+      return (
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <span>{startedAt}</span>
+          <span style={{ margin: '0 8px' }}>~</span>
+        </div>
+      );
     }
 
-    const _endedAt = DateTime.fromFormat(endedAtString, DATE_FORMAT.YYYY_LL);
-    return {
-      periodTitle: `${startedAt.toFormat(DATE_FORMAT.YYYY_DOT_LL)} ~ ${_endedAt.toFormat(
-        DATE_FORMAT.YYYY_DOT_LL,
-      )}`,
-      endedAt: _endedAt,
-      isWorking: false,
-    };
+    const _endedAt = DateTime.fromFormat(endedAtString, DATE_FORMAT.YYYY_LL).toFormat(
+      DATE_FORMAT.YYYY_DOT_LL,
+    );
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <span>{startedAt}</span>
+        <span style={{ margin: '0 8px' }}>~</span>
+        <span>{_endedAt}</span>
+      </div>
+    );
   })();
 
+  return <h4 style={Style.gray}>{periodTitle}</h4>;
+}
+
+function createBadges(startedAtString: string, endedAtString?: string) {
+  const DATE_FORMAT = Util.LUXON_DATE_FORMAT;
+  const startedAt = DateTime.fromFormat(startedAtString, DATE_FORMAT.YYYY_LL);
+  const isWorking = !endedAtString;
+  const endedAt = endedAtString
+    ? DateTime.fromFormat(endedAtString, DATE_FORMAT.YYYY_LL)
+    : undefined;
+
   return (
-    <Row>
-      <Col md={12} xs={isWorking ? 7 : 9}>
-        <h4 style={Style.gray}>{periodTitle}</h4>
-      </Col>
-      <Col md={12} xs={isWorking ? 5 : 3} className="text-md-right text-center">
-        {isWorking ? (
-          <Badge color="primary" className="mr-1">
-            재직 중
-          </Badge>
-        ) : (
-          ''
-        )}
-        <Badge color="info">{Util.getFormattingDuration(startedAt, endedAt)}</Badge>
-      </Col>
-    </Row>
+    <>
+      {isWorking ? <Badge color="primary">재직 중</Badge> : ''}
+      <Badge color="info">{Util.getFormattingDuration(startedAt, endedAt)}</Badge>
+    </>
   );
 }

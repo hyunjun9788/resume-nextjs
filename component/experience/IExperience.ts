@@ -48,6 +48,17 @@ export declare namespace IExperience {
 
     descriptions: string[];
     /**
+     * ### 프로젝트별 그룹화된 작업 목록
+     *
+     * @description projects가 있으면 프로젝트별로 그룹화하여 표시하고, 없으면 descriptions를 사용한다.
+     */
+    projects?: Array<{
+      /** 프로젝트명 */
+      title: string;
+      /** 프로젝트 내 작업 목록 */
+      tasks: string[];
+    }>;
+    /**
      * ### (직장)경험의 키워드
      *
      * @description undefined 가 아닐 경우 해당 경험 하단에 **Skill Keywords** 목록이 추가된다.

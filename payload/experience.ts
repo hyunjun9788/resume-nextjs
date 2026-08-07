@@ -2,31 +2,25 @@ import { IExperience } from '../component/experience/IExperience';
 
 const experience: IExperience.Payload = {
   disable: false,
-  disableTotalPeriod: false,
+  disableTotalPeriod: true,
   list: [
     {
-      title: 'Linux Foundation',
-      position: 'System Engineer',
-      startedAt: '1996-02',
-      descriptions: [
-        'Steering Kernel patching and updates for various distributions',
-        'Automating deployment and integration processes for Linux servers',
-        'Spearheading initiatives to enhance Linux kernel security',
-        'Collaborating with global developers to coordinate code contributions',
+      title: '위니언',
+      position: 'FE Developer',
+      startedAt: '2025-06',
+      endedAt: '2026-04',
+      descriptions: [],
+      projects: [
+        {
+          title: '아비쥬 피부과 차트 프로그램 (EMR)',
+          tasks: ['영업일 관리 기능 개발', '코드관리 리뉴얼 페이지 개발'],
+        },
+        {
+          title: '아비쥬 피부과 온라인 예약 서비스',
+          tasks: ['로그인 기능 개발', '마이페이지 개발'],
+        },
       ],
-      skillKeywords: ['C', 'Linux', 'Kernel', 'Security', ' Automation'],
-    },
-    {
-      title: 'Open Source Community',
-      position: 'System Advocate and Developer',
-      startedAt: '2010-06',
-      endedAt: '2018-01',
-      descriptions: [
-        'Promoted the use and development of Linux globally.',
-        'Developed automated scripts to streamline system configuration.',
-        'Facilitated live patching systems, reducing downtime.',
-      ],
-      skillKeywords: ['Open Source', 'Linux', 'AWS', 'RDBMS'],
+      skillKeywords: ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Zustand', 'React Hook Form'],
     },
   ],
 };
