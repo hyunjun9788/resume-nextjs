@@ -19,6 +19,12 @@ export declare namespace IProject {
     title: string;
     githubUrl?: string; // GitHub URL 추가
     deployUrl?: string; // 배포 URL 추가
+    /**
+     * ### 서비스 URL 에 노출할 로고 이미지
+     *
+     * @description `undefined` 일 경우 도메인 텍스트가 대신 노출된다.
+     */
+    deployLogo?: string;
     /** ### 어디서 수행했는지 (or subtitle) */
     detail: string;
 

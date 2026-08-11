@@ -5,9 +5,23 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { IRow } from './IRow';
 import { Style } from './Style';
 import { CommonDescription } from './CommonDescription';
-import wdyta from '../../asset/wdyta.jpg';
-import sulsul from '../../asset/sulsul.jpg';
-import pikiTalki from '../../asset/piki_talki.jpg';
+
+function createUrlContent({ href, label, logo, icon }: IRow.LeftUrl) {
+  if (logo) {
+    // 로고마다 가로세로 비율이 달라 높이만 고정하고 너비는 비율에 맞춰 늘어나도록 둔다.
+    return (
+      <img
+        src={logo}
+        alt={`${label} 로고`}
+        style={{ height: '40px', width: 'auto', maxWidth: '160px', objectFit: 'contain' }}
+      />
+    );
+  }
+  if (icon === 'github') {
+    return <FontAwesomeIcon icon={faGithub} style={{ fontSize: '36px' }} />;
+  }
+  return <span>{href.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>;
+}
 
 export function CommonRows({
   index,
@@ -43,8 +57,9 @@ export function CommonRows({
                 }}
               >
                 {left.url &&
-                  left.url.map((urlItem, urlIndex) => (
+                  left.url.map((urlItem) => (
                     <div
+                      key={urlItem.href}
                       style={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -52,54 +67,12 @@ export function CommonRows({
                         gap: '10px',
                       }}
                     >
-                      {/* {urlIndex > 0 && '|'} */}
-                      {urlIndex === 0 && <span style={{ fontWeight: 'normal' }}>Github</span>}
-                      {urlIndex === 1 && <span style={{ fontWeight: 'normal' }}>서비스 URL</span>}
-
-                      <span key={urlItem}>
-                        <a href={urlItem} style={Style.gray} target="_blank" rel="noreferrer">
-                          {index === 0 && urlIndex === 0 && (
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
-                              <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px' }} />
-                            </div>
-                          )}
-                          {index === 0 && urlIndex === 1 && (
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
-                              <img
-                                src={pikiTalki}
-                                width="90px"
-                                height="24px"
-                                alt="피키토키 서비스 url"
-                              />
-                            </div>
-                          )}
-                          {index === 1 && urlIndex === 0 && (
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
-                              <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px' }} />
-                            </div>
-                          )}
-                          {index === 1 && urlIndex === 1 && (
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
-                              <img
-                                src={sulsul}
-                                width="90px"
-                                height="24px"
-                                alt="sulsul 서비스 url"
-                              />
-                            </div>
-                          )}
-                          {index === 2 && urlIndex === 0 && (
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
-                              <FontAwesomeIcon icon={faGithub} style={{ fontSize: '24px' }} />
-                            </div>
-                          )}
-                          {index === 2 && urlIndex === 1 && (
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
-                              <img src={wdyta} width="90px" height="24px" alt="wdyta 서비스 url" />
-                            </div>
-                          )}
-                        </a>
-                      </span>
+                      <span style={{ fontWeight: 'normal' }}>{urlItem.label}</span>
+                      <a href={urlItem.href} style={Style.gray} target="_blank" rel="noreferrer">
+                        <div style={{ display: 'flex', alignItems: 'center', height: '40px' }}>
+                          {createUrlContent(urlItem)}
+                        </div>
+                      </a>
                     </div>
                   ))}
               </div>

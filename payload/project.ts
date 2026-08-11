@@ -1,12 +1,125 @@
 import { IProject } from '../component/project/IProject';
+import abijou from '../asset/abijou_logo.png';
+import wdyta from '../asset/wdyta.jpg';
+import sulsul from '../asset/sulsul.jpg';
+import pikiTalki from '../asset/piki_talki.jpg';
 
 const project: IProject.Payload = {
   disable: false,
   list: [
     {
+      title: '아비쥬 온라인 예약센터',
+      deployUrl: 'https://abijouonline.com',
+      deployLogo: abijou,
+      startedAt: '2025-12',
+      endedAt: '2026-04',
+      detail: '피부과 온라인 예약 서비스 - 본인인증 로그인 · 마이페이지 담당',
+      skill: [
+        'Next.js 16 (App Router)',
+        'React',
+        'TypeScript',
+        'TanStack Query',
+        'Zustand',
+        'React Hook Form',
+        'Zod',
+        'Axios',
+        'Tailwind',
+        'FSD',
+      ],
+      descriptions: [
+        {
+          content: '휴대폰 SMS 본인인증 로그인 플로우 전담 개발',
+          weight: 'SEMI_BOLD',
+          descriptions: [
+            {
+              content:
+                '별도 회원가입 없이 고객명 + 휴대폰 인증만으로 진입하는 구조로,\nreact-hook-form과 Zod 스키마를 활용해 필드별 검증 규칙을 구현',
+            },
+            {
+              content:
+                '인증번호 유효시간 카운트다운과 만료 처리, 언마운트 시 인터벌 정리를 커스텀 훅으로 분리',
+            },
+            {
+              content:
+                'SMS 요청 제한 에러코드를 파싱해 서버가 내려준 잔여시간으로 재전송 타이머를 동기화하고,\n제한 상태 동안 인증 입력을 비활성화',
+            },
+            {
+              content:
+                'mode prop 하나로 독립 로그인 페이지와 예약 플로우 내 간이 인증 팝업에서 동일 폼 컴포넌트를 재사용',
+            },
+          ],
+        },
+        {
+          content: '동시 요청 중복 갱신을 방지하는 액세스 토큰 자동 재발급 구조 설계',
+          weight: 'SEMI_BOLD',
+          descriptions: [
+            {
+              content:
+                'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급한 뒤 원 요청을 자동 재시도',
+            },
+            {
+              content:
+                '여러 요청이 동시에 401을 받을 경우 refresh API가 중복 호출되는 문제를 확인, isRefreshing 플래그와 대기열을 도입해 재발급은 1회만 수행하고 나머지 요청은 신규 토큰으로 일괄 재개',
+            },
+            {
+              content:
+                '갱신 실패 시 자동 로그아웃 처리 - 개인정보 관련 쿼리 캐시만 선별 제거해 잔여 refetch로 인한 401 연쇄를 차단',
+            },
+            {
+              content:
+                'Zustand persist의 hydration 완료 시점을 기다려 렌더하는 라우트 가드로 새로고침 시 화면 깜빡임과 오리다이렉트를 제거',
+            },
+          ],
+        },
+        {
+          content: '마이페이지 전체를 폴더 구조 설계부터 API 연동까지 단독 담당',
+          weight: 'SEMI_BOLD',
+          descriptions: [
+            {
+              content:
+                '공통 레이아웃(데스크탑 sticky 사이드바 / 모바일 바텀시트)과 4개 서브페이지(계정 정보, 예약 확인·취소, 지난 예약 조회, 보유 시술) 구현',
+            },
+            {
+              content:
+                '지난 예약 조회의 필터·페이지 상태를 URL 쿼리 파라미터와 동기화해 새로고침·뒤로가기·공유 시에도 조회 조건이 유지되도록 구현',
+            },
+            {
+              content:
+                '데스크탑 무한 스크롤(useInfiniteQuery)과 모바일 페이지네이션(useQuery + keepPreviousData)을 단일 훅 인터페이스로 통합해 디바이스별 페이징 전략을 분리',
+            },
+            {
+              content:
+                '동일 일자 내 예약 순서가 뒤섞이는 문제를 다중 정렬 파라미터(date → time → id) 적용으로 해결',
+            },
+            {
+              content: '당일 예약 취소 방어 로직을 UI 노출 조건과 함수 레벨에 이중으로 적용',
+            },
+          ],
+        },
+        {
+          content: 'FSD 아키텍처 레이어 정합성 리팩토링 및 공통 기반 정비',
+          weight: 'SEMI_BOLD',
+          descriptions: [
+            {
+              content:
+                'pages/widgets/features/entities/shared 계층 위반을 정리하고 로그인·마이페이지 폴더 구조를 재설계',
+            },
+            {
+              content:
+                '공통 컴포넌트(Input, Checkbox, Popup, Pagination 등)와 재사용 커스텀 훅을 분리하고, 매직 스트링 상수화 및 any 타입 제거',
+            },
+            {
+              content: '백엔드 에러 응답 공통 처리 로직 추가 및 prod CI/CD 파이프라인 구축 참여',
+            },
+          ],
+        },
+      ],
+    },
+    {
       title: '피키토키(Picki Talki)',
       githubUrl: 'https://github.com/dnd-side-project/dnd-12th-4-frontend',
       deployUrl: 'https://picki-talki.site/',
+      deployLogo: pikiTalki,
       startedAt: '2024-12',
       endedAt: '2025-02',
       detail:
@@ -105,6 +218,7 @@ const project: IProject.Payload = {
       title: '올인원 면접 서비스 SULSUL',
       githubUrl: 'https://github.com/sulsulsulsul/sulsul',
       deployUrl: 'https://www.sulsul-interview.kr/',
+      deployLogo: sulsul,
       startedAt: '2024-07',
       endedAt: '2024-10',
       detail:
@@ -221,6 +335,7 @@ const project: IProject.Payload = {
       title: 'WDYTA (이거어때)',
       githubUrl: 'https://github.com/Codeit-Part4-SFJs/WDYTA',
       deployUrl: 'https://wdyta.vercel.app/',
+      deployLogo: wdyta,
       startedAt: '2024-05',
       endedAt: '2024-06',
       detail: '음악, 식당, 영화, 전자기기 등 다양한 분야의 상품을 리뷰하는 플랫폼 (FE 5)',

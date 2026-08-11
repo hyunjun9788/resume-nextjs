@@ -66,28 +66,28 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
   const component = (() => {
     if (href && postImage) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getLiStyle(weight)}>
           <HrefTargetBlank url={href} text={content} /> <img src={postImage} alt={postImage} />
         </li>
       );
     }
     if (href) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getLiStyle(weight)}>
           <HrefTargetBlank url={href} text={content} />
         </li>
       );
     }
     if (postHref && postImage) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getLiStyle(weight)}>
           {content} <HrefTargetBlank url={postHref} text={postHref} />
         </li>
       );
     }
     if (postHref) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getLiStyle(weight)}>
           {content}
           <a
             href={postHref}
@@ -109,7 +109,7 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     }
     if (postImage) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getLiStyle(weight)}>
           {content} <img src={postImage} alt={postImage} />
         </li>
       );
@@ -117,12 +117,17 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     return (
       <>
         <meta name="format-detection" content="telephone=no" />
-        <li style={getFontWeight(weight)}>{content}</li>
+        <li style={getLiStyle(weight)}>{content}</li>
       </>
     );
   })();
 
   return component;
+}
+
+/** content 안의 `\n` 을 줄바꿈으로 그리기 위해 whiteSpace 를 함께 지정한다. */
+function getLiStyle(weight?: IRow.Description['weight']): CSSProperties {
+  return { whiteSpace: 'pre-line', ...getFontWeight(weight) };
 }
 
 function getFontWeight(weight?: IRow.Description['weight']): CSSProperties {

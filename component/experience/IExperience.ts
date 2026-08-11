@@ -55,6 +55,12 @@ export declare namespace IExperience {
     projects?: Array<{
       /** 프로젝트명 */
       title: string;
+      /**
+       * ### 프로젝트 서비스 URL
+       *
+       * @description 값이 있을 경우 프로젝트명이 새 탭으로 열리는 링크가 된다.
+       */
+      url?: string;
       /** 프로젝트 내 작업 목록 */
       tasks: string[];
     }>;

@@ -50,7 +50,13 @@ export default function ExperienceRow({
                           fontFamily: 'Pretendard, sans-serif',
                         }}
                       >
-                        {project.title}
+                        {project.url ? (
+                          <a href={project.url} target="_blank" rel="noreferrer" style={Style.blue}>
+                            {project.title}
+                          </a>
+                        ) : (
+                          project.title
+                        )}
                       </h6>
                       <ul style={{ marginLeft: '20px', marginBottom: '0' }}>
                         {project.tasks.map((task, taskIndex) => (

@@ -51,13 +51,18 @@ function serialize(payload: IProject.Item): IRow.Payload {
     return `${startedAt} ~`;
   })();
 
-  const githubUrl = payload.githubUrl ? `${payload.githubUrl}` : '';
-  const deployUrl = payload.deployUrl ? `${payload.deployUrl}` : '';
+  const url: IRow.LeftUrl[] = [];
+  if (payload.githubUrl) {
+    url.push({ href: payload.githubUrl, label: 'Github', icon: 'github' });
+  }
+  if (payload.deployUrl) {
+    url.push({ href: payload.deployUrl, label: '서비스 URL', logo: payload.deployLogo });
+  }
 
   return {
     left: {
       title,
-      url: [githubUrl, deployUrl].filter(Boolean),
+      url,
     },
     right: {
       title: payload.title,

@@ -7,7 +7,22 @@ export declare namespace IRow {
   export interface Left {
     title: string | JSX.Element;
     subTitle?: JSX.Element;
-    url?: string[];
+    url?: LeftUrl[];
+  }
+
+  export interface LeftUrl {
+    /** ### 링크 주소 */
+    href: string;
+    /** ### 링크 위에 표시할 라벨 (e.g. "Github", "서비스 URL") */
+    label: string;
+    /**
+     * ### 링크에 노출할 로고 이미지
+     *
+     * @description `undefined` 이고 `icon` 도 없을 경우 도메인 텍스트가 대신 노출된다.
+     */
+    logo?: string;
+    /** ### 로고 이미지가 없을 때 사용할 아이콘 */
+    icon?: 'github';
   }
 
   export interface Right {
