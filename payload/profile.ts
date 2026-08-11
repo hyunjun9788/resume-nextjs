@@ -2,7 +2,7 @@ import { faEnvelope, faPen } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { IProfile } from '../component/profile/IProfile';
-import image from '../asset/profile5.png';
+import image from '../asset/profile6.jpg';
 
 const profile: IProfile.Payload = {
   disable: false,
