@@ -15,7 +15,7 @@ const project: IProject.Payload = {
       endedAt: '2026-04',
       detail: '피부과 온라인 예약 서비스 - 본인인증 로그인 · 마이페이지 담당',
       skill: [
-        'Next.js 16 (App Router)',
+        'Next.js (App Router)',
         'React',
         'TypeScript',
         'TanStack Query',
@@ -24,7 +24,6 @@ const project: IProject.Payload = {
         'Zod',
         'Axios',
         'Tailwind',
-        'FSD',
       ],
       descriptions: [
         {
