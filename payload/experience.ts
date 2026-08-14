@@ -20,6 +20,18 @@ const experience: IExperience.Payload = {
           tasks: ['로그인 · 본인인증 기능 개발', '마이페이지 개발'],
         },
       ],
+      skillKeywords: [
+        'TypeScript',
+        'React',
+        'Next.js',
+        'GraphQL',
+        'TanStack Query',
+        'Zustand',
+        'Recoil',
+        'React Hook Form',
+        'Zod',
+        'Tailwind CSS',
+      ],
     },
   ],
 };

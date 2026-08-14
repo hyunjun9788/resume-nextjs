@@ -4,6 +4,7 @@ import skill from './skill';
 import experience from './experience';
 import openSource from './openSource';
 import project from './project';
+import sideProject from './sideProject';
 // import presentation from './presentation';
 import education from './education';
 import article from './article';
@@ -32,6 +33,7 @@ const Payload: Payload = {
   openSource,
   experience,
   project,
+  sideProject,
   // presentation,
   article,
   education,
@@ -48,6 +50,7 @@ interface Payload {
   openSource: IOpenSource.Payload;
   experience: IExperience.Payload;
   project: IProject.Payload;
+  sideProject: IProject.Payload;
   // presentation: IPresentation.Payload;
   education: IEducation.Payload;
   article: IArticle.Payload;

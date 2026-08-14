@@ -64,11 +64,12 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                   라는 말을 들으면 큰 보람을 느낍니다.
                 </li>
                 <li>
-                  아이콘 공통 컴포넌트를 설계하고, 사용법과 스타일 가이드를 각각{' '}
-                  <span style={{ fontWeight: 600 }}>TSDoc</span>과{' '}
-                  <span style={{ fontWeight: 600 }}>PR</span>에 정리해{' '}
-                  <span style={{ fontWeight: 600 }}>빠른 개발에 도움이 되었다는 피드백</span>을 받은
-                  경험이 있습니다.
+                  팀 내 논의로만 공유되던 프론트엔드 코드 컨벤션을{' '}
+                  <span style={{ fontWeight: 600 }}>Cursor Rules</span>로 종합해,{' '}
+                  <span style={{ fontWeight: 600 }}>
+                    사람과 AI가 같은 기준으로 코드를 작성하도록
+                  </span>{' '}
+                  기준을 문서화한 경험이 있습니다.
                 </li>
               </ul>
               {/* 네트워크 요청 및 리소스 로딩 시간을 분석한

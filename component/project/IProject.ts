@@ -12,6 +12,13 @@ export declare namespace IProject {
   export interface Payload extends ICommon.Payload {
     /** ### 프로젝트 리스트 */
     list: Item[];
+
+    /**
+     * ### 섹션 타이틀
+     *
+     * @description `undefined` 일 경우 'PROJECT' 로 표기된다. 회사 프로젝트와 사이드 프로젝트처럼 섹션을 나눠 렌더링할 때 사용한다.
+     */
+    title?: string;
   }
 
   export interface Item {
