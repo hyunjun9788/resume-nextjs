@@ -51,8 +51,8 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               >
                 <li>
                   동료들이 제 코드를 이해하고 활용하는 데 들이는 시간을 1초라도 줄이기 위해,
-                  <span style={{ fontWeight: 600 }}> 가독성과 직관성</span>을 최우선으로 고려하며
                   <br />
+                  <span style={{ fontWeight: 600 }}>가독성과 직관성</span>을 최우선으로 고려하며
                   개발에 임합니다.
                 </li>
                 <li>
@@ -65,11 +65,8 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                 </li>
                 <li>
                   팀 내 논의로만 공유되던 프론트엔드 코드 컨벤션을{' '}
-                  <span style={{ fontWeight: 600 }}>Cursor Rules</span>로 종합해,{' '}
-                  <span style={{ fontWeight: 600 }}>
-                    사람과 AI가 같은 기준으로 코드를 작성하도록
-                  </span>{' '}
-                  기준을 문서화한 경험이 있습니다.
+                  <span style={{ fontWeight: 600 }}>Cursor Rules</span>로 종합해 문서화한 경험이
+                  있습니다.
                 </li>
               </ul>
               {/* 네트워크 요청 및 리소스 로딩 시간을 분석한

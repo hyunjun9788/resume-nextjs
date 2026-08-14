@@ -82,7 +82,7 @@ const project: IProject.Payload = {
             // },
             {
               content:
-                '데스크탑 무한 스크롤(useInfiniteQuery)과 모바일 페이지네이션(useQuery + keepPreviousData)을 단일 훅 인터페이스로 통합해 디바이스별 페이징 전략을 분리',
+                '데스크탑 무한 스크롤과 모바일 페이지네이션을 단일 훅 인터페이스로 통합해 디바이스별 페이징 전략을 분리',
             },
             // {
             //   content:
