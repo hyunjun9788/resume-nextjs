@@ -56,14 +56,14 @@ const sideProject: IProject.Payload = {
             },
             {
               content:
-                '사용자가 아무런 액션 없이 사이트에 머무를 경우, 토큰 만료 시점에도 jwt 콜백이 실행되지 않아 만료된 세션이 유지되는 문제 발견',
+                '사용자가 아무 액션 없이 머무는 동안 토큰 만료 시점에도 jwt 콜백이 실행되지 않아 만료된 세션이 유지되는 이슈 -> 주기적으로 만료를 체크하여 useSession 훅의 update를 호출함으로써 jwt 콜백을 실행하고 세션을 갱신하며 해결',
               postHref: '',
             },
-            {
-              content:
-                '주기적으로 토큰 만료를 체크하여 useSession 훅의 update를 호출함으로써 jwt 콜백을 실행하고 세션을 갱신하며 해결',
-              postHref: '',
-            },
+            // {
+            //   content:
+            //     '주기적으로 토큰 만료를 체크하여 useSession 훅의 update를 호출함으로써 jwt 콜백을 실행하고 세션을 갱신하며 해결',
+            //   postHref: '',
+            // },
           ],
           weight: 'SEMI_BOLD',
         },
@@ -118,13 +118,13 @@ const sideProject: IProject.Payload = {
           descriptions: [
             {
               content:
-                '타이머 기능이 상위 컴포넌트에서 관리되어 불필요한 리렌더링이 발생하고, 타이머 로직의 재사용성 부족으로 코드 중복 및 유지보수 어려움 존재',
+                '타이머 기능이 상위 컴포넌트에서 관리되어 불필요한 리렌더링이 발생하고,\n타이머 로직의 재사용성 부족으로 코드 중복 및 유지보수 어려움 존재',
               postHref: '',
             },
 
             {
               content:
-                'useIntervalValue 커스텀 훅 설계 타이머 상태를 훅 내부에서 관리하여 의존성 분리하고, 모듈화함으로써 불필요한 리렌더링 방지함',
+                '타이머 상태를 훅 내부에서 관리하도록 분리해 상위 컴포넌트의 불필요한 리렌더링 제거 및 재사용 가능하도록 모듈화',
               postHref: '',
             },
           ],
@@ -145,12 +145,7 @@ const sideProject: IProject.Payload = {
               postHref: '',
             },
             {
-              content:
-                'CDN region 설정을 최적화하여 사용자와 가장 가까운 서버에서 리소스를 제공하도록 구성하였고, 이를 통해 서비스 전반의 서버 응답 속도를 약 21% 개선',
-              postHref: '',
-            },
-            {
-              content: '성능 개선 이후, 사용자들에게 보다 빠르고 최적화된 서비스 환경을 제공',
+              content: '사용자와 가장 가까운 서버에서 리소스를 제공하도록 CDN region 재설정',
               postHref: '',
             },
 

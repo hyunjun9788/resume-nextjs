@@ -38,7 +38,7 @@ const project: IProject.Payload = {
             },
             {
               content:
-                'SMS 요청 제한 에러코드를 파싱해 서버가 내려준 잔여시간으로 재전송 타이머를 동기화하고,\n제한 상태 동안 인증 입력을 비활성화',
+                'SMS 요청 제한 에러코드를 파싱해 서버가 내려준 잔여시간으로 재전송 타이머를 동기화',
             },
             {
               content:
@@ -52,15 +52,15 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급한 뒤 원 요청을 자동 재시도',
+                'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급 후 원 요청을 자동 재시도',
             },
             {
               content:
-                '여러 요청이 동시에 401을 받을 경우 refresh API가 중복 호출되는 문제를 확인, isRefreshing 플래그와 대기열을 도입해 재발급은 1회만 수행하고 나머지 요청은 신규 토큰으로 일괄 재개',
+                '동시 401 발생 시 refresh API가 중복 호출되는 문제를 isRefreshing 플래그와 대기열로 해결,\n재발급 1회 후 대기 요청을 신규 토큰으로 일괄 재개',
             },
             {
               content:
-                '갱신 실패 시 자동 로그아웃 처리 - 쿼리 캐시에서 사용자 종속 데이터만 선별 제거해, 남은 쿼리의 refetch로 인한 불필요한 401 요청을 차단',
+                '갱신 실패 시 사용자 종속 쿼리 캐시만 선별 제거해 잔여 refetch로 인한 401 연쇄를 차단하며 로그아웃',
             },
             // {
             //   content:
@@ -103,12 +103,12 @@ const project: IProject.Payload = {
             },
             {
               content:
-                '공통 컴포넌트(Input, Checkbox, Popup, Pagination 등)와 재사용 커스텀 훅을 분리하고, 매직 스트링 상수화 및 any 타입 제거',
+                '공통 컴포넌트(Input, Checkbox, Popup)와 재사용 커스텀 훅을 분리하고, 매직 스트링 상수화 및 any 타입 제거',
             },
-            {
-              content:
-                '팀 내 논의로만 공유되던 프론트엔드 코드 컨벤션을 종합해 Cursor Rules로 문서화',
-            },
+            // {
+            //   content:
+            //     '팀 내 논의로만 공유되던 프론트엔드 코드 컨벤션을 종합해 Cursor Rules로 문서화',
+            // },
             // {
             //   content: '백엔드 에러 응답 공통 처리 로직 추가 및 prod CI/CD 파이프라인 구축 참여',
             // },
@@ -137,12 +137,12 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                '예약·접수·상담·시술·퇴원 5단계 컬럼형 보드를 탭 전환 기반 상태 변경까지 설계부터 구현까지 담당',
+                '예약·접수·상담·시술·퇴원 5단계 컬럼형 보드와 탭 전환 기반 상태 변경 기능을 설계부터 구현까지 담당',
             },
-            {
-              content:
-                '날짜 선택·직접 입력 캘린더와 고객명 검색을 조회 조건으로 묶어, 조건 변경 시 보드 카드와 근무자 현황이 함께 갱신되도록 데이터 흐름 구성',
-            },
+            // {
+            //   content:
+            //     '날짜 선택·직접 입력 캘린더와 고객명 검색을 조회 조건으로 묶어, 조건 변경 시 보드 카드와 근무자 현황이 함께 갱신되도록 데이터 흐름 구성',
+            // },
           ],
         },
         {

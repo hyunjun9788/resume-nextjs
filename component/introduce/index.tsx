@@ -99,10 +99,10 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                   </span>
                 </li>
                 <li>
-                  초기 이미지 로딩 지연 문제를 개선하고자 이미지 최적화 작업을 수행하여,{' '}
+                  초기 이미지 로딩 지연 문제를 개선하고자 이미지 최적화 작업을 수행하여,
+                  <br />
                   <span style={{ fontWeight: 600 }}>
-                    LCP 지표를 2.8초에서 2.3초로
-                    <br /> 약 18% 단축한 경험이 있습니다.
+                    LCP 지표를 2.8초에서 2.3초로 약 18% 단축한 경험이 있습니다.
                   </span>
                 </li>
               </ul>
