@@ -19,6 +19,13 @@ export declare namespace IProject {
      * @description `undefined` 일 경우 'PROJECT' 로 표기된다. 회사 프로젝트와 사이드 프로젝트처럼 섹션을 나눠 렌더링할 때 사용한다.
      */
     title?: string;
+
+    /**
+     * ### 섹션 타이틀 상단 여백
+     *
+     * @description `undefined` 일 경우 '30px' 이 적용된다. 인쇄 시 페이지 나눔 위치를 조정할 때 사용한다.
+     */
+    marginTop?: string;
   }
 
   export interface Item {
