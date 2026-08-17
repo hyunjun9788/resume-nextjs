@@ -272,7 +272,7 @@ const sideProject: IProject.Payload = {
           descriptions: [
             {
               content:
-                'prefetchQuery 도입하여 상품 카드 로딩 속도 566ms에서 307ms까지 단축하여 약 45% 성능 개선',
+                'prefetchQuery 도입하여 상품 카드 로딩 속도 566ms->307ms 까지 단축하여 약 45% 성능 개선',
             },
             {
               content: '사용자에게 즉시 반응을 보이기 위해 팔로우 버튼에 Optimistic Update 적용',
