@@ -1,5 +1,4 @@
 import { IProject } from '../component/project/IProject';
-import wdyta from '../asset/wdyta.jpg';
 
 const sideProject: IProject.Payload = {
   disable: false,
@@ -215,8 +214,6 @@ const sideProject: IProject.Payload = {
     {
       title: 'WDYTA (이거어때)',
       githubUrl: 'https://github.com/Codeit-Part4-SFJs/WDYTA',
-      deployUrl: 'https://wdyta.vercel.app/',
-      deployLogo: wdyta,
       startedAt: '2024-05',
       endedAt: '2024-06',
       detail: '음악, 식당, 영화, 전자기기 등 다양한 분야의 상품을 리뷰하는 플랫폼 (FE 5)',
