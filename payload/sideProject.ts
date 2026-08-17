@@ -262,7 +262,7 @@ const sideProject: IProject.Payload = {
             },
             {
               content:
-                'next/image의 sizes 속성을 활용해 뷰포트 크기에 따라 최적화된 이미지 크기를 로드하고, 이미지 로딩 속도 약 38% 개선 및 LCP 지표 18% 단축',
+                'next/image의 sizes 속성을 활용해 뷰포트 크기에 따라 최적화된 이미지 크기를 로드하고,\n이미지 로딩 속도 약 38% 개선 및 LCP 지표 18% 단축',
             },
           ],
         },
