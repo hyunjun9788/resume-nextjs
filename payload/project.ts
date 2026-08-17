@@ -95,7 +95,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content: 'FSD 아키텍처 레이어 정합성 리팩토링 및 공통 기반 정비',
+          content: 'FSD 아키텍처 계층 구조 설계 및 공통 기반 정비',
           weight: 'SEMI_BOLD',
           descriptions: [
             {
