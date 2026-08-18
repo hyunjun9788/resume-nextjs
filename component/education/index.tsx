@@ -38,6 +38,7 @@ function EducationRow({ payload }: PropsWithChildren<{ payload: Payload }>) {
             key={index.toString()}
             payload={serialize(item)}
             index={index}
+            titleFontSize="20px"
           />
         );
       })}

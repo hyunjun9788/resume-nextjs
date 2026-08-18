@@ -28,11 +28,13 @@ export function CommonRows({
   payload,
   type,
   marginTop,
+  titleFontSize,
 }: PropsWithChildren<{
   payload: IRow.Payload;
   index: number;
   type?: string;
   marginTop?: string;
+  titleFontSize?: string;
 }>) {
   const { left, right } = payload;
 
@@ -100,7 +102,11 @@ export function CommonRows({
         </Col>
         <Col sm={12} md={9}>
           {right.title ? (
-            <h4 style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>{right.title}</h4>
+            <h4
+              style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: titleFontSize }}
+            >
+              {right.title}
+            </h4>
           ) : (
             ''
           )}
