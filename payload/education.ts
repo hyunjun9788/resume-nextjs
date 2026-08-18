@@ -16,7 +16,6 @@ const education: IEducation.Payload = {
     {
       title: '왓에버 멘토링',
       subTitle: [
-        'JavaScript 코어 지식을 학습하고, SPA를 직접 구현하며 SPA에 대한 이해도를 향상시켰습니다.',
         'JavaScript로 Virtual DOM을 구현하며 JSX의 트랜스파일 과정을 이해하고, 동작 원리를 학습했습니다.',
       ],
 

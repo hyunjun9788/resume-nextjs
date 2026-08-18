@@ -25,7 +25,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   // );
 
   return (
-    <div className="mt-5">
+    <div style={{ marginTop: '32px' }}>
       <Row>
         <Col sm={12} md={3}>
           <h2 style={Style.blue}>INTRODUCE</h2>
@@ -75,7 +75,6 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               통해 서비스 전반의 서버 응답 속도를
               <span style={{ fontWeight: 'bold' }}> 약 21%</span> 개선했습니다. 성능 개선 이후,
               사용자들에게 보다 빠르고 최적화된 서비스 환경을 제공할 수 있었습니다. */}
-              <br />
               {/* 팀원들의 빠르고 안전한 개발이 가능하도록 공용 컴포넌트 개발 시 고민을 신중하게 하는
               편입니다. 이미지, 아이콘들을 컴포넌트화를 시켜주며, 팀원들은 아이콘 및 이미지 이름을
               속성 값에 추가만 하도록 구현한 경험이 있습니다. 기본 스타일을 PR을 통해 기록하여 코드

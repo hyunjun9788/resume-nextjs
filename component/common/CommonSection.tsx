@@ -4,11 +4,11 @@ import { EmptyRowCol } from '.';
 
 export function CommonSection({
   title,
-  marginTop = '30px',
+  marginTop = '20px',
   children,
 }: PropsWithChildren<{ title: string; marginTop?: string }>) {
   return (
-    <div className="mt-5 mb-5">
+    <div style={{ marginTop: '32px', marginBottom: '32px' }}>
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>

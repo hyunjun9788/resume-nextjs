@@ -4,7 +4,7 @@ import abijou from '../asset/abijou_logo.png';
 const project: IProject.Payload = {
   disable: false,
   title: 'WORK PROJECT',
-  marginTop: '100px',
+  marginTop: '20px',
   list: [
     {
       title: '아비쥬 온라인 예약 서비스',
@@ -30,21 +30,19 @@ const project: IProject.Payload = {
           weight: 'SEMI_BOLD',
           descriptions: [
             {
-              content:
-                '고객명 + 휴대폰 인증만으로 진입하는 폼을 react-hook-form과 Zod 기반 필드별 검증으로 구현',
+              content: 'SMS 요청 제한 에러코드를 파싱해 서버 잔여시간으로 재전송 타이머 동기화',
             },
             {
-              content:
-                '인증번호 유효시간 카운트다운과 만료 처리, 언마운트 시 인터벌 정리를 커스텀 훅으로 분리',
+              content: 'mode prop으로 로그인 페이지와 예약 내 인증 팝업에서 동일 폼 재사용',
             },
-            {
-              content:
-                'SMS 요청 제한 에러코드를 파싱해 서버가 내려준 잔여시간으로 재전송 타이머를 동기화',
-            },
-            {
-              content:
-                'mode prop 하나로 독립 로그인 페이지와 예약 플로우 내 간이 인증 팝업에서 동일 폼 컴포넌트를 재사용',
-            },
+            // {
+            //   content:
+            //     'SMS 요청 제한 에러코드를 파싱해 서버가 내려준 잔여시간으로 재전송 타이머를 동기화',
+            // },
+            // {
+            //   content:
+            //     'mode prop 하나로 독립 로그인 페이지와 예약 플로우 내 간이 인증 팝업에서 동일 폼 컴포넌트를 재사용',
+            // },
           ],
         },
         {

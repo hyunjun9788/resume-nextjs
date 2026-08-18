@@ -13,12 +13,12 @@ function createUrlContent({ href, label, logo, icon }: IRow.LeftUrl) {
       <img
         src={logo}
         alt={`${label} 로고`}
-        style={{ height: '20px', width: 'auto', maxWidth: '80px', objectFit: 'contain' }}
+        style={{ height: '24px', width: 'auto', maxWidth: '100px', objectFit: 'contain' }}
       />
     );
   }
   if (icon === 'github') {
-    return <FontAwesomeIcon icon={faGithub} style={{ fontSize: '18px' }} />;
+    return <FontAwesomeIcon icon={faGithub} style={{ fontSize: '22px' }} />;
   }
   return <span>{href.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>;
 }
@@ -35,7 +35,7 @@ export function CommonRows({
   return (
     <div>
       {type === 'project' && index > 0 && (
-        <hr style={{ marginTop: '30px', marginBottom: '50px' }} />
+        <hr style={{ marginTop: '24px', marginBottom: '24px' }} />
       )}
       {type === 'experience' && index > 0 ? (
         <hr style={{ marginTop: '12px', marginBottom: '20px' }} />
@@ -80,7 +80,7 @@ export function CommonRows({
                         rel="noreferrer"
                         aria-label={urlItem.label}
                       >
-                        <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', height: '24px' }}>
                           {createUrlContent(urlItem)}
                         </div>
                       </a>

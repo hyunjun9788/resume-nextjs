@@ -26,7 +26,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   //   Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
   // );
   return (
-    <div className="mt-5">
+    <div style={{ marginTop: '32px' }}>
       <Row>
         <Col md={3} sm={12}>
           <ProfileImage src={image} />
