@@ -11,7 +11,7 @@ export function CommonSection({
   return (
     <div style={{ ...Style.section, marginBottom: '32px' }}>
       <EmptyRowCol>
-        <Row className="pb-3">
+        <Row className="pb-2">
           <Col>
             <h2 style={{ ...Style.blue, ...Style.sectionTitle, marginTop }}>
               <span>{title}</span>

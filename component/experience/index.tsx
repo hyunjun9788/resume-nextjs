@@ -35,7 +35,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
     <div style={Style.section}>
       <EmptyRowCol>
-        <Row className="pb-3">
+        <Row className="pb-2">
           <Col>
             <h2 style={{ ...Style.blue, ...Style.sectionTitle }}>EXPERIENCE {totalPeriod()}</h2>
           </Col>
