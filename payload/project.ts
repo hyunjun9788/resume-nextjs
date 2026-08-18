@@ -99,7 +99,7 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                'pages/widgets/features/entities/shared 계층 위반을 정리하고 로그인·마이페이지 폴더 구조를 재설계',
+                'pages/widgets/features/entities/shared 계층 위반 정리 및 로그인·마이페이지 구조 재설계',
             },
             {
               content:
