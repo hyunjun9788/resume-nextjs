@@ -25,28 +25,30 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   // );
 
   return (
-    <div style={{ marginTop: '32px' }}>
+    // 프로필 이미지 래퍼의 pb-3 가 이미 여백을 만들어 공통 값보다 좁게 잡는다.
+    <div style={{ ...Style.section, marginTop: '10px' }}>
       <Row>
         <Col sm={12} md={3}>
-          <h2 style={Style.blue}>INTRODUCE</h2>
+          <h2 style={{ ...Style.blue, ...Style.sectionTitle }}>INTRODUCE</h2>
         </Col>
         <Col sm={12} md={9}>
           {payload.contents.map((_, index) => (
-            <p key={index.toString()}>
-              <h3 style={{ fontWeight: 'bold', fontSize: '24px' }}>
+            <p key={index.toString()} style={{ marginBottom: 0 }}>
+              <h3 style={{ fontWeight: 'bold', fontSize: '20px' }}>
                 옆에 있는 동료들을 최우선으로 생각하는 프론트엔드 개발자{' '}
                 <span style={{ color: '#3c78d8' }}>남현준</span>입니다.
               </h3>
-              <br />
-              <h3 style={{ fontWeight: 600, fontSize: '20px', color: '#3c78d8' }}>
+              <h3
+                style={{ fontWeight: 600, fontSize: '18px', color: '#3c78d8', marginTop: '24px' }}
+              >
                 동료의 1초를 저의 1초보다 소중하게 생각합니다.
               </h3>
               <ul
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '8px',
-                  padding: '12px 20px',
+                  gap: '2px',
+                  padding: '4px 20px',
                 }}
               >
                 <li>
@@ -60,8 +62,9 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                   <span style={{ fontStyle: 'italic', color: '#898e96' }}>
                     {' '}
                     &apos;현준님 덕분에 편하게 개발했어요.&apos;
-                  </span>{' '}
-                  라는 말을 들으면 큰 보람을 느낍니다.
+                  </span>
+                  라는 말을 들으면
+                  <br />큰 보람을 느낍니다.
                 </li>
                 <li>
                   팀 내 논의로만 공유되던 프론트엔드 코드 컨벤션을{' '}
@@ -80,15 +83,17 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               속성 값에 추가만 하도록 구현한 경험이 있습니다. 기본 스타일을 PR을 통해 기록하여 코드
               리뷰 시 스타일 가이드를 공유하고, 추가적인 스타일 적용도 가능하도록 유연성을
               확보했습니다. 이를 통해 팀원들로부터 긍정적인 피드백을 받을 수 있었습니다. */}
-              <h3 style={{ fontWeight: 600, fontSize: '20px', color: '#3c78d8' }}>
+              <h3 style={{ fontWeight: 600, fontSize: '18px', color: '#3c78d8' }}>
                 사용자 경험을 위한 성능 개선을 추구합니다.
               </h3>
+              {/* 마지막 목록이라 bootstrap 의 ul 기본 margin-bottom(1rem) 을 없앤다. */}
               <ul
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '8px',
-                  padding: '12px 20px',
+                  gap: '2px',
+                  padding: '4px 20px',
+                  marginBottom: 0,
                 }}
               >
                 <li>

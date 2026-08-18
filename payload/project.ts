@@ -4,7 +4,6 @@ import abijou from '../asset/abijou_logo.png';
 const project: IProject.Payload = {
   disable: false,
   title: 'WORK PROJECT',
-  marginTop: '20px',
   list: [
     {
       title: '아비쥬 온라인 예약 서비스',
@@ -33,7 +32,8 @@ const project: IProject.Payload = {
               content: 'SMS 요청 제한 에러코드를 파싱해 서버 잔여시간으로 재전송 타이머 동기화',
             },
             {
-              content: 'mode prop으로 로그인 페이지와 예약 내 인증 팝업에서 동일 폼 재사용',
+              content:
+                '본인인증 폼을 mode prop 기반 단일 컴포넌트로 설계해 로그인·예약 화면에서 공통 사용',
             },
             // {
             //   content:
@@ -51,7 +51,7 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급 후 원 요청을 자동 재시도',
+                'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급 후\n원 요청을 자동 재시도',
             },
             {
               content:

@@ -33,11 +33,11 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
 
   // 여기는 기간 표시, Skill Keywords 같은 특이 요소가 있어서 CommonSection, CommonRow 로 못바꾸지 않을까..
   return (
-    <div style={{ marginTop: '32px' }}>
+    <div style={Style.section}>
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>
-            <h2 style={Style.blue}>EXPERIENCE {totalPeriod()}</h2>
+            <h2 style={{ ...Style.blue, ...Style.sectionTitle }}>EXPERIENCE {totalPeriod()}</h2>
           </Col>
         </Row>
         {payload.list.map((item, index) => (

@@ -21,11 +21,11 @@ export const Skill = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
-    <div style={{ marginTop: '32px' }}>
+    <div style={Style.section}>
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>
-            <h2>
+            <h2 style={Style.sectionTitle}>
               <span style={Style.blue}>SKILL</span>
               {createTooltip(payload.tooltip)}
             </h2>
