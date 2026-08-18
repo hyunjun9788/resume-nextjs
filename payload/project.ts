@@ -4,6 +4,7 @@ import abijou from '../asset/abijou_logo.png';
 const project: IProject.Payload = {
   disable: false,
   title: 'WORK PROJECT',
+  marginTop: '40px',
   list: [
     {
       title: '아비쥬 온라인 예약 서비스',

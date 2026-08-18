@@ -25,7 +25,7 @@ export default function ExperienceRow({
               gap: '8px',
             }}
           >
-            <h4>{item.title}</h4>
+            <h4 style={Style.itemTitle}>{item.title}</h4>
             <i style={Style.gray}>{item.position}</i>
             <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
               {createBadges(item.startedAt, item.endedAt)}
@@ -114,7 +114,7 @@ function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
     return `${startedAt} ~ ${_endedAt}`;
   })();
 
-  return <h4 style={{ ...Style.gray, fontSize: '20px' }}>{periodTitle}</h4>;
+  return <h4 style={{ ...Style.gray, ...Style.itemDate }}>{periodTitle}</h4>;
 }
 
 function createBadges(startedAtString: string, endedAtString?: string) {

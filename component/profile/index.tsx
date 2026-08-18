@@ -50,7 +50,7 @@ function createNameArea(name: Payload['name']) {
   return (
     <Row>
       <Col className="text-center text-md-left">
-        <h1 style={Style.blue}>
+        <h1 style={{ ...Style.blue, fontSize: '32px' }}>
           {name.title} <small>{name.small || ''}</small>
         </h1>
       </Col>
