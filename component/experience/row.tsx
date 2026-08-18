@@ -13,7 +13,7 @@ export default function ExperienceRow({
     <div>
       {index > 0 ? <hr /> : ''}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
+        <Col sm={12} md={3} className="text-md-center">
           {createWorkingPeriod(item.startedAt, item.endedAt)}
         </Col>
         <Col sm={12} md={9}>
@@ -26,13 +26,12 @@ export default function ExperienceRow({
             }}
           >
             <h4>{item.title}</h4>
+            <i style={Style.gray}>{item.position}</i>
             <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
               {createBadges(item.startedAt, item.endedAt)}
             </div>
           </div>
-          <i style={Style.gray}>{item.position}</i>
-          {createSkillKeywords(item.skillKeywords)}
-          <div className="pt-3">
+          <div className="pt-2">
             {item.projects ? (
               <>
                 {item.projects.map((project, projectIndex) => {
@@ -69,13 +68,14 @@ export default function ExperienceRow({
                 })}
               </>
             ) : (
-              <ul>
+              <>
                 {item.descriptions.map((description, descIndex) => (
-                  <li key={descIndex.toString()}>{description}</li>
+                  <div key={descIndex.toString()}>{description}</div>
                 ))}
-              </ul>
+              </>
             )}
           </div>
+          {createSkillKeywords(item.skillKeywords)}
         </Col>
       </Row>
     </div>
@@ -105,41 +105,16 @@ function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
 
   const periodTitle = (() => {
     if (!endedAtString) {
-      return (
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <span>{startedAt}</span>
-          <span style={{ margin: '0 8px' }}>~</span>
-        </div>
-      );
+      return `${startedAt} ~`;
     }
 
     const _endedAt = DateTime.fromFormat(endedAtString, DATE_FORMAT.YYYY_LL).toFormat(
       DATE_FORMAT.YYYY_DOT_LL,
     );
-    return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <span>{startedAt}</span>
-        <span style={{ margin: '0 8px' }}>~</span>
-        <span>{_endedAt}</span>
-      </div>
-    );
+    return `${startedAt} ~ ${_endedAt}`;
   })();
 
-  return <h4 style={Style.gray}>{periodTitle}</h4>;
+  return <h4 style={{ ...Style.gray, fontSize: '20px' }}>{periodTitle}</h4>;
 }
 
 function createBadges(startedAtString: string, endedAtString?: string) {

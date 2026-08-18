@@ -110,25 +110,25 @@ const sideProject: IProject.Payload = {
         '나의 자소서 기반으로 면접질문 예측 및 면접기출 100선 제공 서비스  (PM/디자이너  1 BE 2 FE 4)',
       skill: ['TypeScript', 'Next.js', 'Tanstack Query', 'Zustand', 'React Hook Form', 'Tailwind'],
       descriptions: [
-        {
-          content: 'useIntervalValue 커스텀 훅을 활용한 타이머 리렌더링 개선',
-          postHref:
-            'https://velog.io/@hyunjun9788/%ED%83%80%EC%9D%B4%EB%A8%B8-useInterval-%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0',
-          descriptions: [
-            {
-              content:
-                '타이머 기능이 상위 컴포넌트에서 관리되어 불필요한 리렌더링이 발생하고,\n타이머 로직의 재사용성 부족으로 코드 중복 및 유지보수 어려움 존재',
-              postHref: '',
-            },
+        // {
+        //   content: 'useIntervalValue 커스텀 훅을 활용한 타이머 리렌더링 개선',
+        //   postHref:
+        //     'https://velog.io/@hyunjun9788/%ED%83%80%EC%9D%B4%EB%A8%B8-useInterval-%EC%BB%A4%EC%8A%A4%ED%85%80-%ED%9B%85-%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0',
+        //   descriptions: [
+        //     {
+        //       content:
+        //         '타이머 기능이 상위 컴포넌트에서 관리되어 불필요한 리렌더링이 발생하고,\n타이머 로직의 재사용성 부족으로 코드 중복 및 유지보수 어려움 존재',
+        //       postHref: '',
+        //     },
 
-            {
-              content:
-                '타이머 상태를 훅 내부에서 관리하도록 분리해 상위 컴포넌트의 불필요한 리렌더링 제거 및 재사용 가능하도록 모듈화',
-              postHref: '',
-            },
-          ],
-          weight: 'SEMI_BOLD',
-        },
+        //     {
+        //       content:
+        //         '타이머 상태를 훅 내부에서 관리하도록 분리해 상위 컴포넌트의 불필요한 리렌더링 제거 및 재사용 가능하도록 모듈화',
+        //       postHref: '',
+        //     },
+        //   ],
+        //   weight: 'SEMI_BOLD',
+        // },
         {
           content: 'CDN region 최적화 -> 서버 응답 속도 21% 개선  (lighthouse 56점 -> 86점)',
           postHref:
@@ -230,15 +230,14 @@ const sideProject: IProject.Payload = {
             },
             {
               content:
-                '팀원들이 공통 컴포넌트를 안전하고 효율적으로 사용할 수 있도록 TypeScript와 SVGR 라이브러리를 도입',
+                'TypeScript + SVGR 도입하여 아이콘·이미지 컴포넌트화, props 기반 타입 안전성 확보',
             },
+            // {
+            //   content:
+            //     'SVG 컴포넌트에 타입 기반 속성을 적용하며, 아이콘 및 이미지명을 props로 전달',
+            // },
             {
-              content:
-                'SVG 컴포넌트에 타입 기반 속성을 적용하며, 아이콘 및 이미지명을 props로 전달',
-            },
-            {
-              content:
-                '기본 스타일을 TSDoc 및 PR을 통해 기록하여 코드 리뷰 시 스타일 가이드를 공유하고, 추가적인 스타일 적용도 가능하도록 유연성을 확보',
+              content: 'TSDoc과 PR로 스타일 가이드를 문서화해 팀 내 사용 기준 공유',
             },
           ],
         },
@@ -263,19 +262,19 @@ const sideProject: IProject.Payload = {
             },
           ],
         },
-        {
-          content: '프로필 페이지 개발',
-          weight: 'SEMI_BOLD',
-          descriptions: [
-            {
-              content:
-                'prefetchQuery 도입하여 상품 카드 로딩 속도 566ms->307ms 까지 단축하여 약 45% 성능 개선',
-            },
-            {
-              content: '사용자에게 즉시 반응을 보이기 위해 팔로우 버튼에 Optimistic Update 적용',
-            },
-          ],
-        },
+        // {
+        //   content: '프로필 페이지 개발',
+        //   weight: 'SEMI_BOLD',
+        //   descriptions: [
+        //     {
+        //       content:
+        //         'prefetchQuery 도입하여 상품 카드 로딩 속도 566ms->307ms 까지 단축하여 약 45% 성능 개선',
+        //     },
+        //     {
+        //       content: '사용자에게 즉시 반응을 보이기 위해 팔로우 버튼에 Optimistic Update 적용',
+        //     },
+        //   ],
+        // },
 
         // {
         //   content: '팔로우 모달 개발 ',

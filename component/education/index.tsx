@@ -56,34 +56,9 @@ function serialize(item: Item): IRow.Payload {
       const endedAt = DateTime.fromFormat(item.endedAt, DATE_FORMAT.YYYY_LL).toFormat(
         DATE_FORMAT.YYYY_DOT_LL,
       );
-      return (
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <span>{startedAt}</span>
-          <span style={{ margin: '0 8px' }}>~</span>
-          <span>{endedAt}</span>
-        </div>
-      );
+      return `${startedAt} ~ ${endedAt}`;
     }
-    return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <span>{startedAt}</span>
-        <span style={{ margin: '0 8px' }}>~</span>
-      </div>
-    );
+    return `${startedAt} ~`;
   })();
   return {
     left: { title },

@@ -81,7 +81,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               속성 값에 추가만 하도록 구현한 경험이 있습니다. 기본 스타일을 PR을 통해 기록하여 코드
               리뷰 시 스타일 가이드를 공유하고, 추가적인 스타일 적용도 가능하도록 유연성을
               확보했습니다. 이를 통해 팀원들로부터 긍정적인 피드백을 받을 수 있었습니다. */}
-              <h3 style={{ fontWeight: 600, fontSize: '20px', color: '#3c78d8' }}>
+              {/*               <h3 style={{ fontWeight: 600, fontSize: '20px', color: '#3c78d8' }}>
                 사용자 경험을 위한 성능 개선을 추구합니다.
               </h3>
               <ul
@@ -105,7 +105,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                     LCP 지표를 2.8초에서 2.3초로 약 18% 단축한 경험이 있습니다.
                   </span>
                 </li>
-              </ul>
+              </ul> */}
             </p>
           ))}
           {/* <p className="text-right">

@@ -13,12 +13,12 @@ function createUrlContent({ href, label, logo, icon }: IRow.LeftUrl) {
       <img
         src={logo}
         alt={`${label} 로고`}
-        style={{ height: '40px', width: 'auto', maxWidth: '160px', objectFit: 'contain' }}
+        style={{ height: '20px', width: 'auto', maxWidth: '80px', objectFit: 'contain' }}
       />
     );
   }
   if (icon === 'github') {
-    return <FontAwesomeIcon icon={faGithub} style={{ fontSize: '36px' }} />;
+    return <FontAwesomeIcon icon={faGithub} style={{ fontSize: '18px' }} />;
   }
   return <span>{href.replace(/^https?:\/\//, '').replace(/\/$/, '')}</span>;
 }
@@ -43,17 +43,18 @@ export function CommonRows({
         ''
       )}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
+        <Col sm={12} md={3} className="text-md-center">
           <Row>
             <Col md={12}>
-              <h4 style={Style.gray}>{left.title}</h4>
+              <h4 style={{ ...Style.gray, fontSize: '20px' }}>{left.title}</h4>
               <div
                 style={{
                   width: '100%',
                   display: 'flex',
                   justifyContent: 'center',
+                  alignItems: 'flex-end',
                   gap: '20px',
-                  marginTop: '20px',
+                  marginTop: '12px',
                 }}
               >
                 {left.url &&
@@ -64,12 +65,22 @@ export function CommonRows({
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        gap: '10px',
+                        gap: '6px',
                       }}
                     >
-                      <span style={{ fontWeight: 'normal' }}>{urlItem.label}</span>
-                      <a href={urlItem.href} style={Style.gray} target="_blank" rel="noreferrer">
-                        <div style={{ display: 'flex', alignItems: 'center', height: '40px' }}>
+                      {urlItem.icon === 'github' ? (
+                        ''
+                      ) : (
+                        <span style={{ fontWeight: 'normal' }}>{urlItem.label}</span>
+                      )}
+                      <a
+                        href={urlItem.href}
+                        style={Style.gray}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={urlItem.label}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
                           {createUrlContent(urlItem)}
                         </div>
                       </a>
