@@ -41,8 +41,7 @@ export function CommonRows({
   const isNeedDescriptionPadding = !!(right.title || right.detail || right.skill);
 
   return (
-    // 여백을 margin 으로 주면 바로 아래 <hr> 의 marginTop 과 상쇄되어 padding 으로 준다.
-    <div style={{ paddingTop: marginTop }}>
+    <div>
       {type === 'project' && index > 0 && (
         <hr style={{ marginTop: '24px', marginBottom: '24px' }} />
       )}
@@ -51,7 +50,8 @@ export function CommonRows({
       ) : (
         ''
       )}
-      <Row>
+      {/* 구분선은 제자리에 두고 본문만 내리기 위해 <hr> 과 상쇄되지 않는 padding 으로 준다. */}
+      <Row style={{ paddingTop: marginTop }}>
         <Col sm={12} md={3} className="text-md-center">
           <Row>
             <Col md={12}>

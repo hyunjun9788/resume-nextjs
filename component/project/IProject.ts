@@ -63,7 +63,7 @@ export declare namespace IProject {
     /**
      * ### 항목 상단 추가 여백
      *
-     * @description `undefined` 일 경우 추가 여백이 없다. 구분선을 포함한 항목 전체를 아래로 내릴 때 사용한다.
+     * @description `undefined` 일 경우 추가 여백이 없다. 구분선은 제자리에 두고 항목 본문만 아래로 내릴 때 사용한다.
      */
     marginTop?: string;
 
