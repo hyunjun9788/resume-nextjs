@@ -27,13 +27,20 @@ export function CommonRows({
   index,
   payload,
   type,
-}: PropsWithChildren<{ payload: IRow.Payload; index: number; type?: string }>) {
+  marginTop,
+}: PropsWithChildren<{
+  payload: IRow.Payload;
+  index: number;
+  type?: string;
+  marginTop?: string;
+}>) {
   const { left, right } = payload;
 
   const isNeedDescriptionPadding = !!(right.title || right.detail || right.skill);
 
   return (
-    <div>
+    // 여백을 margin 으로 주면 바로 아래 <hr> 의 marginTop 과 상쇄되어 padding 으로 준다.
+    <div style={{ paddingTop: marginTop }}>
       {type === 'project' && index > 0 && (
         <hr style={{ marginTop: '24px', marginBottom: '24px' }} />
       )}

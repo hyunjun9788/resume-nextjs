@@ -16,6 +16,7 @@ export default function ProjectRow({ payload }: PropsWithChildren<{ payload: IPr
             key={index.toString()}
             payload={serialize(item)}
             index={index}
+            marginTop={item.marginTop}
           />
         );
       })}

@@ -103,6 +103,7 @@ const sideProject: IProject.Payload = {
     },
     {
       title: '올인원 면접 서비스 SULSUL',
+      marginTop: '50px',
       githubUrl: 'https://github.com/sulsulsulsul/sulsul',
       startedAt: '2024-07',
       endedAt: '2024-10',
@@ -242,23 +243,21 @@ const sideProject: IProject.Payload = {
           ],
         },
         {
-          content:
-            '이미지 최적화를 통해 이미지 로딩 시간 1.8s에서 1.1s까지 단축 (약 38% 성능 개선)',
+          content: '이미지 최적화를 통해 이미지 로딩 시간 1.8s -> 1.1s까지 단축 (약 38% 성능 개선)',
           weight: 'SEMI_BOLD',
           postHref:
             'https://velog.io/@hyunjun9788/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%B1%EB%8A%A5-%EA%B0%9C%EC%84%A0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B5%9C%EC%A0%81%ED%99%94-prefetch',
           descriptions: [
             {
-              content:
-                '용량이 큰 이미지 파일일수록 프로필 이미지 변경 시 이미지 로딩 지연이 두드러져 사용자 경험에 부정적인 영향을 미칠거라고 판단',
+              content: '프로필 이미지 변경 시 용량이 클수록 로딩 지연이 두드러지는 문제 발생',
             },
             {
               content:
-                '모든 화면 크기에서 동일한 이미지 크기를 로드하여 불필요한 리소스 낭비가 발생, 네트워크 환경과 화면 크기에 맞춰 최적화된 이미지 제공이 필요하다고 결론',
+                'fill 사용 시 sizes 기본값 100vw로 인해 실제 표시 크기와 무관하게 뷰포트 너비 기준 이미지를 요청한 것이 원인',
             },
             {
               content:
-                'next/image의 sizes 속성을 활용해 뷰포트 크기에 따라 최적화된 이미지 크기를 로드하고,\n이미지 로딩 속도 약 38% 개선 및 LCP 지표 18% 단축',
+                'sizes에 요소별 실제 렌더링 크기를 지정하고 next.config의 imageSizes·deviceSizes를 정리',
             },
           ],
         },

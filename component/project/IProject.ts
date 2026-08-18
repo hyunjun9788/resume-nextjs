@@ -61,6 +61,13 @@ export declare namespace IProject {
     endedAt?: string;
 
     /**
+     * ### 항목 상단 추가 여백
+     *
+     * @description `undefined` 일 경우 추가 여백이 없다. 구분선을 포함한 항목 전체를 아래로 내릴 때 사용한다.
+     */
+    marginTop?: string;
+
+    /**
      * ### 프로젝트 설명
      */
     descriptions: IRow.Description[];
