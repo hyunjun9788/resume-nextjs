@@ -103,7 +103,7 @@ const sideProject: IProject.Payload = {
     },
     {
       title: '올인원 면접 서비스 SULSUL',
-      marginTop: '250px',
+      marginTop: '300px',
       githubUrl: 'https://github.com/sulsulsulsul/sulsul',
       startedAt: '2024-07',
       endedAt: '2024-10',
