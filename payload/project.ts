@@ -30,7 +30,8 @@ const project: IProject.Payload = {
           weight: 'SEMI_BOLD',
           descriptions: [
             {
-              content: 'SMS 요청 제한 에러코드를 파싱해 서버 잔여시간으로 재전송 타이머 동기화',
+              content:
+                'SMS 재요청 제한 에러코드를 파싱해 서버 잔여시간 기준으로 재전송 타이머 동기화',
             },
             {
               content:
@@ -52,15 +53,15 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급 후\n원 요청을 자동 재시도',
+                'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급하고\n원 요청 자동 재시도',
             },
             {
               content:
-                '동시 401 발생 시 refresh API가 중복 호출되는 문제를 isRefreshing 플래그와 대기열로 해결,\n재발급 1회 후 대기 요청을 신규 토큰으로 일괄 재개',
+                '동시 401 발생 시 Refresh API 중복 호출을 isRefreshing 플래그와 대기열로 방지하고, 재발급 후 대기 요청을 신규 토큰으로 일괄 재시도',
             },
             {
               content:
-                '갱신 실패 시 사용자 종속 쿼리 캐시만 선별 제거해 잔여 refetch로 인한 401 연쇄를 차단하며 로그아웃',
+                '토큰 갱신 실패 시 사용자 관련 캐시를 선택 제거해 추가 refetch와 401 연쇄 요청 방지',
             },
             // {
             //   content:
@@ -146,20 +147,20 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content: '코드 관리 페이지 리뉴얼 및 영업일 · 예약 허용량 관리 기능 개발',
+          content: '코드 관리 페이지 리뉴얼 및 서버 상태 관리 구조 개선',
           weight: 'SEMI_BOLD',
           descriptions: [
             {
               content:
-                '코드 유형별 사용지점 · 가격 설정 팝업 컴포넌트를 조회/수정 모드로 분리하여 개발',
+                '코드 유형별 사용지점·가격 설정 UI를 조회/수정 모드로 분리하여 관리 기능 개발',
             },
             {
               content:
-                '무한 스크롤 목록을 page 상태로 직접 누적하던 구조를 useInfiniteQuery 기반으로 전환하여,\n코드명 수정 후에도 목록에 이전 값이 남던 문제 해결',
+                '페이지별 응답을 로컬 state에 직접 누적하던 무한 스크롤 구조를 useInfiniteQuery 기반으로 전환',
             },
             {
               content:
-                '캘린더 기반 영업일 · 휴무 · 예외 관리와 요일별 · 날짜별 예약 허용량 템플릿 시스템을 구현하고,\n저장 시 수정된 템플릿만 필터링해 요청하도록 처리',
+                '코드 수정 후 이전 페이지의 stale 데이터가 남던 문제를 해결하고, 필터 조건별 캐시와 서버 상태를 기준으로 목록 관리',
             },
           ],
         },
@@ -191,11 +192,11 @@ const project: IProject.Payload = {
           descriptions: [
             {
               content:
-                '화면마다 중복 구현돼 있던 고객 검색 UI를 단일 공통 컴포넌트로 통합,\n예약 등록 · 컴플레인 상담 · 멤버십 양도 · 고객 등록 · 현장 접수 등 6개 이상 화면에서 재사용',
+                '예약 등록·컴플레인 상담·멤버십 양도·현장 접수 등 6개 이상 화면에 중복된 고객 검색 기능을 공통화',
             },
             {
               content:
-                'props drilling 으로 전달되던 본원 여부(isHeadOffice) 판별 값을 Recoil atom 으로 대체해\n고객 · 컴플레인 · 예약현황 페이지의 의존 구조를 정리',
+                '검색·고객 선택 UI와 화면별 비즈니스 로직을 분리해 callback 기반으로 재사용하도록 구성',
             },
           ],
         },
