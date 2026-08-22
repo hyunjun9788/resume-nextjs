@@ -27,92 +27,67 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content: '휴대폰 SMS 본인인증 로그인 플로우 전담 개발',
-          weight: 'SEMI_BOLD',
-          descriptions: [
-            {
-              content: 'SMS 요청 제한 에러코드를 파싱해 서버 잔여시간으로 재전송 타이머 동기화',
-            },
-            {
-              content:
-                '본인인증 폼을 mode prop 기반 단일 컴포넌트로 설계해 로그인·예약 화면에서 공통 사용',
-            },
-            // {
-            //   content:
-            //     'SMS 요청 제한 에러코드를 파싱해 서버가 내려준 잔여시간으로 재전송 타이머를 동기화',
-            // },
-            // {
-            //   content:
-            //     'mode prop 하나로 독립 로그인 페이지와 예약 플로우 내 간이 인증 팝업에서 동일 폼 컴포넌트를 재사용',
-            // },
-          ],
+          // 상세 내용은 이력서에 노출하지 않고 면접·포트폴리오에서 설명한다.
+          // descriptions: [
+          //   {
+          //     content: 'SMS 요청 제한 에러코드를 파싱해 서버 잔여시간으로 재전송 타이머 동기화',
+          //   },
+          //   {
+          //     content:
+          //       '독립 로그인 페이지와 예약 플로우 내 간이 인증 팝업의 본인인증 폼을 단일 컴포넌트로 통합',
+          //   },
+          // ],
         },
         {
-          content: '동시 요청 중복 갱신을 방지하는 액세스 토큰 자동 재발급 구조 설계',
-          weight: 'SEMI_BOLD',
-          descriptions: [
-            {
-              content:
-                'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급 후\n원 요청을 자동 재시도',
-            },
-            {
-              content:
-                '동시 401 발생 시 refresh API가 중복 호출되는 문제를 isRefreshing 플래그와 대기열로 해결,\n재발급 1회 후 대기 요청을 신규 토큰으로 일괄 재개',
-            },
-            {
-              content:
-                '갱신 실패 시 사용자 종속 쿼리 캐시만 선별 제거해 잔여 refetch로 인한 401 연쇄를 차단하며 로그아웃',
-            },
-            // {
-            //   content:
-            //     'Zustand persist의 hydration 완료 시점을 기다려 렌더하는 라우트 가드로 새로고침 시 화면 깜빡임과 오리다이렉트를 제거',
-            // },
-          ],
+          content: '액세스 토큰 자동 재발급 구조 설계 및 개발',
+          // descriptions: [
+          //   {
+          //     content:
+          //       'Axios 인터셉터에서 401 응답 시 HttpOnly 쿠키의 refreshToken으로 재발급 후 원 요청을 자동 재시도',
+          //   },
+          //   {
+          //     content:
+          //       '동시 401 발생 시 refresh API가 중복 호출되는 문제를 isRefreshing 플래그와 대기열로 해결, 재발급 1회 후 대기 요청을 신규 토큰으로 일괄 재개',
+          //   },
+          //   {
+          //     content:
+          //       '갱신 실패 시 사용자 종속 쿼리 캐시만 선별 제거해 잔여 refetch로 인한 401 연쇄를 차단하며 로그아웃',
+          //   },
+          //   {
+          //     content:
+          //       'Zustand persist의 hydration 완료 시점을 기다려 렌더하는 라우트 가드로 새로고침 시 화면 깜빡임과 오리다이렉트를 제거',
+          //   },
+          // ],
         },
         // {
         //   content: '마이페이지 폴더 구조 설계 및 API 연동',
         //   weight: 'SEMI_BOLD',
         //   descriptions: [
-        //     // {
-        //     //   content:
-        //     //     '공통 레이아웃(데스크탑 sticky 사이드바 / 모바일 바텀시트)과 4개 서브페이지 구현',
-        //     // },
-        //     // {
-        //     //   content:
-        //     //     '지난 예약 조회의 필터·페이지 상태를 URL 쿼리 파라미터와 동기화해 새로고침·뒤로가기·공유 시에도 조회 조건이 유지되도록 구현',
-        //     // },
+        //     {
+        //       content:
+        //         '지난 예약 조회의 필터·페이지 상태를 URL 쿼리 파라미터와 동기화해 새로고침·뒤로가기·공유 시에도 조회 조건이 유지되도록 구현',
+        //     },
         //     {
         //       content:
         //         '데스크탑 무한 스크롤과 모바일 페이지네이션을 단일 훅 인터페이스로 통합해 디바이스별 페이징 전략을 분리',
         //     },
-        //     // {
-        //     //   content:
-        //     //     '동일 일자 내 예약 순서가 뒤섞이는 문제를 다중 정렬 파라미터(date → time → id) 적용으로 해결',
-        //     // },
-        //     // {
-        //     //   content: '당일 예약 취소 방어 로직을 UI 노출 조건과 함수 레벨에 이중으로 적용',
-        //     // },
         //   ],
         // },
         {
           content: 'FSD 아키텍처 계층 구조 설계 및 공통 기반 정비',
-          weight: 'SEMI_BOLD',
-          descriptions: [
-            {
-              content:
-                'pages/widgets/features/entities/shared 계층 위반 정리 및 로그인·마이페이지 구조 재설계',
-            },
-            {
-              content:
-                '공통 컴포넌트(Input, Checkbox, Popup)와 재사용 커스텀 훅을 분리하고, 매직 스트링 상수화 및 any 타입 제거',
-            },
-            // {
-            //   content:
-            //     '팀 내 논의로만 공유되던 프론트엔드 코드 컨벤션을 종합해 Cursor Rules로 문서화',
-            // },
-            // {
-            //   content: '백엔드 에러 응답 공통 처리 로직 추가 및 prod CI/CD 파이프라인 구축 참여',
-            // },
-          ],
+          // descriptions: [
+          //   {
+          //     content:
+          //       'pages/widgets/features/entities/shared 계층 위반 정리 및 로그인·마이페이지 구조 재설계',
+          //   },
+          //   {
+          //     content:
+          //       '공통 컴포넌트(Input, Checkbox, Popup)와 재사용 커스텀 훅을 분리하고, 매직 스트링 상수화 및 any 타입 제거',
+          //   },
+          //   {
+          //     content: '팀 내 논의로만 공유되던 프론트엔드 코드 컨벤션을 종합해 Cursor Rules로 문서화',
+          //   },
+          // ],
         },
       ],
     },
